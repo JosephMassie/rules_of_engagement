@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rules of Engagement
+
+An open source web app designed to make the current ITS Season Tournament rules for Corvus Beli's wargame Infinity.
 
 ## Getting Started
 
