@@ -1,9 +1,23 @@
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+import { Audiowide, Quantico } from 'next/font/google';
 import './globals.css';
+import { ThemeProvider } from 'next-themes';
+import { DisplayModeToggle } from '@/components/ui/display_mode_toggle';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
-const roboto = Roboto({
-    variable: '--font-roboto',
+const audiowide = Audiowide({
+    variable: '--font-audiowide',
+    weight: '400',
+    subsets: ['latin'],
+    style: 'normal',
+});
+
+const orbitron = Quantico({
+    variable: '--font-quantico',
+    weight: '400',
+    subsets: ['latin'],
+    style: 'normal',
 });
 
 export const metadata: Metadata = {
@@ -18,8 +32,40 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={`${roboto.variable} antialiased`}>{children}</body>
+        <html lang="en" suppressHydrationWarning>
+            <body
+                className={`${audiowide.variable} ${orbitron.variable} antialiased bg-background`}>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange>
+                    <div className="min-h-screen mx-auto relative max-w-7xl font-main">
+                        <div className="z-10 sticky top-0 left-0 w-full min-h-4 p-4 flex justify-start items-center bg-card">
+                            <Button asChild variant="ghost">
+                                <Link
+                                    className="font-decorative leading-none text-xl"
+                                    href="/">
+                                    {' '}
+                                    RoE
+                                </Link>
+                            </Button>
+                            <Button asChild variant="secondary">
+                                <Link className="ml-4 text-sm" href="/seasons">
+                                    Seasons
+                                </Link>
+                            </Button>
+                            <div className="ml-auto">
+                                <DisplayModeToggle />
+                            </div>
+                        </div>
+
+                        <main className="w-full flex flex-col gap-4 py-10 px-6 sm:px-10 lg:px-12 text-center">
+                            {children}
+                        </main>
+                    </div>
+                </ThemeProvider>
+            </body>
         </html>
     );
 }
