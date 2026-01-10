@@ -7,5 +7,9 @@ export default async function TestPage({
 }) {
     const { season } = await params;
 
-    return <SeasonDisplay seasonKey={season} />;
+    return (
+        <div>
+            <SeasonDisplay seasonKey={season} />
+        </div>
+    );
 }

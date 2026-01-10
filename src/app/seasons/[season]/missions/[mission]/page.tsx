@@ -7,5 +7,9 @@ export default async function Mission({
 }) {
     const { season, mission } = await params;
 
-    return <MissionDisplay seasonKey={season} missionKey={mission} />;
+    return (
+        <div>
+            <MissionDisplay seasonKey={season} missionKey={mission} />
+        </div>
+    );
 }
