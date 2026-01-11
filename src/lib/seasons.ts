@@ -9,7 +9,7 @@ let cache: Record<string, SeasonData> | null = null;
 export async function loadSeasons(opts?: {
     useCache?: boolean;
 }): Promise<Record<string, SeasonData>> {
-    const useCache = opts?.useCache ?? true;
+    const useCache = opts?.useCache ?? false;
 
     if (useCache && cache) return cache;
 
