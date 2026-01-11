@@ -5,6 +5,7 @@ import { ThemeProvider } from 'next-themes';
 import { DisplayModeToggle } from '@/components/ui/display_mode_toggle';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Analytics } from '@vercel/analytics/next';
 
 const audiowide = Audiowide({
     variable: '--font-audiowide',
@@ -63,6 +64,7 @@ export default function RootLayout({
                         {children}
                     </main>
                 </ThemeProvider>
+                <Analytics />
             </body>
         </html>
     );
