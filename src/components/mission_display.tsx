@@ -46,7 +46,7 @@ export default function MissionDisplay({
 
     return (
         <div {...props}>
-            <h1 className="text-4xl md:text-6xl font-decorative">
+            <h1 className="text-2xl sm:text-4xl md:text-6xl font-decorative">
                 {mission.name}
             </h1>
             <Separator className="my-4" />
