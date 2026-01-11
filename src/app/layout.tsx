@@ -59,7 +59,7 @@ export default function RootLayout({
                         </div>
                     </div>
 
-                    <main className="mx-auto max-w-7xl w-full flex flex-col gap-4 py-10 px-6 sm:px-10 lg:px-12 text-center">
+                    <main className="mx-auto max-w-7xl w-full flex flex-col gap-4 py-10 px-2 sm:px-10 lg:px-12 text-center">
                         {children}
                     </main>
                 </ThemeProvider>
