@@ -34,36 +34,34 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${audiowide.variable} ${orbitron.variable} antialiased bg-background`}>
+                className={`${audiowide.variable} ${orbitron.variable} font-main antialiased bg-background`}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
                     enableSystem
                     disableTransitionOnChange>
-                    <div className="min-h-screen mx-auto relative max-w-7xl font-main">
-                        <div className="z-10 sticky top-0 left-0 w-full min-h-4 p-4 flex justify-start items-center bg-card">
-                            <Button asChild variant="ghost">
-                                <Link
-                                    className="font-decorative leading-none text-xl"
-                                    href="/">
-                                    {' '}
-                                    RoE
-                                </Link>
-                            </Button>
-                            <Button asChild variant="secondary">
-                                <Link className="ml-4 text-sm" href="/seasons">
-                                    Seasons
-                                </Link>
-                            </Button>
-                            <div className="ml-auto">
-                                <DisplayModeToggle />
-                            </div>
+                    <div className="z-10 sticky top-0 left-0 w-full min-h-4 p-4 flex justify-start items-center bg-card">
+                        <Button asChild variant="ghost">
+                            <Link
+                                className="font-decorative leading-none text-xl"
+                                href="/">
+                                {' '}
+                                RoE
+                            </Link>
+                        </Button>
+                        <Button asChild variant="secondary">
+                            <Link className="ml-4 text-sm" href="/seasons">
+                                Seasons
+                            </Link>
+                        </Button>
+                        <div className="ml-auto">
+                            <DisplayModeToggle />
                         </div>
-
-                        <main className="w-full flex flex-col gap-4 py-10 px-6 sm:px-10 lg:px-12 text-center">
-                            {children}
-                        </main>
                     </div>
+
+                    <main className="mx-auto max-w-7xl w-full flex flex-col gap-4 py-10 px-6 sm:px-10 lg:px-12 text-center">
+                        {children}
+                    </main>
                 </ThemeProvider>
             </body>
         </html>
