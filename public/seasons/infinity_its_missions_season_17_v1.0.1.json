@@ -81,7 +81,7 @@
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with the Akial Antenna.",
                     "effects": "• Without needing to perform a Roll, the player can Filter the Signal. • When Filtering the Signal, the player chooses one of the current Common Classified Objective cards. • If any player has accomplished the chosen card, it is placed with the other accomplished cards. If neither player has accomplished the card, discard it. • The player draws a replacement card from their deck."
                 },
-                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
+                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
         },
@@ -149,7 +149,7 @@
                 "tracking_beacon": "There is 1 Tracking Beacon placed in the center of the table. The Tracking Beacon must be represented by a Beacon Token (BEACON) or by a scenery piece of the same diameter (such as the Beacon from the ITS Objectives Pack Alpha, the Tactical Beacons by Micro Art Studio, the Tracking Beacons by Warsenal or the Mark One Beacons by Customeeple).",
                 "relocate_the_tracking_beacon": {
                     "name": "RELOCATE THE TRACKING BEACON",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with the Tracking Beacon. • Each Specialist Troop can only declare this Skill once per Game Round.",
                     "effects": "• Spending one Short Skill, without needing to perform a Roll, the player can Relocate the Tracking Beacon. • Place the Tracking Beacon anywhere within 4 inches of its previous position."
                 },
@@ -158,15 +158,15 @@
                 "consoles": "There are two Consoles, placed on the central line of the game table. They are placed 12 inches from the table edges in 300/350/400 point games, 8 inches in 200/250 point games, and 6 inches in 150 point games (see map). Each Console must be represented by a Console A Token or by a scenery piece of the same diameter (such as the Consoles from the ITS Objectives Pack Alpha, the Human Consoles by Micro Art Studio, the Tech Consoles by Warsenal or the Comlink Console by Customeeple).",
                 "activate_console": {
                     "name": "ACTIVATE CONSOLE",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with the Console. • The Tracking Beacon cannot be in Silhouette contact with a Trooper. • Each Specialist Troop can only successfully Activate a Console once per Game Round.",
                     "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Activate the Console. If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • Once you successfully have Activated the Console, you must choose and perform one of the following actions: • Nudge the Tracking Beacon: Place the Tracking Beacon anywhere within 2 inches of its current position. • Magnetize the Tracking Beacon: Place the Tracking Beacon within 6 inches of its current position and directly towards the center of the game table. This action cannot be used to move the Tracking Beacon beyond the center of the table. 26"
                 },
-                "no_quarter": "In this scenario, the Retreat! rules are not applied. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round.",
+                "no_quarter": "In this scenario, the Retreat! rules are not applied.",
                 "control_the_console": "At the end of each Game Round, a Console is Controlled by a player as long as that player is the only one with at least one Trooper (as a Model, not a Marker) in Silhouette contact with it. So there cannot be any enemy Troopers in Silhouette contact with the Console. Models in a Null State cannot do either.",
                 "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops."
             },
-            "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. CONTROL THE CONSOLE At the end of each Game Round, a Console is Controlled by a player as long as that player is the only one with at least one Trooper (as a Model, not a Marker) in Silhouette contact with it. So there cannot be any enemy Troopers in Silhouette contact with the Console. Models in a Null State cannot do either. SPECIALIST TROOPS For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops."
+            "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round."
         },
         {
             "name": "CORPORATE APPROPRIATION",
@@ -252,7 +252,7 @@
                     "effects": "• By succeeding at a WIP Roll, a Trooper gains the D-Charges weapon or, if their player prefers, makes a Roll on the Panoply Chart to obtain one different weapon or piece of equipment. Once a success has been rolled, that Trooper cannot use this Panoply again. • Troopers possessing the Booty Special Skill, or any other Skill which specifies so, don’t need to make the WIP Roll. • A Trooper in Silhouette contact with this piece of scenery may spend one"
                 },
                 "panoply_chart": "1-2 +1 ARM 13 Panzerfaust 3-4 Light Flamethrower 14 Monofilament CC Weapon 5-6 Grenades 15 MOV 8-4 7-8 DA CC Weapon 16 TAG: BS Attack (Shock) Other Troop Types: MULTI Rifle 9 Multispectral Visor L1 17 MULTI Sniper Rifle 10 EXP CC Weapon 18 TAG: Immunity (ARM) Other Troop Types: + 4 ARM 11 Adhesive Launcher Rifle 19 Mimetism (-6) 12 TAG: Immunity (AP) Other Troop Types: + 2 ARM 20 TAG: BS Attack (+1B) Other Troop Types: HMG",
-                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
+                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
         },
@@ -278,45 +278,9 @@
                         "To Kill at least 85 enemy Army Points",
                         "To Kill at least 100 enemy Army Points",
                         "1 Objective Point"
-                    ],
-                    [
-                        "150-POINT GAME",
-                        "200-POINT GAME",
-                        "250-POINT GAME",
-                        "300-POINT GAME",
-                        "350-POINT GAME",
-                        "400-POINT GAME",
-                        "OBJECTIVE POINTS"
-                    ],
-                    [
-                        "To Kill at least 75 enemy Army Points",
-                        "To Kill at least 100 enemy Army Points",
-                        "To Kill at least 125 enemy Army Points",
-                        "To Kill at least 150 enemy Army Points",
-                        "To Kill at least 175 enemy Army Points",
-                        "To Kill at least 200 enemy Army Points",
-                        "2 Objective Points"
                     ]
                 ],
                 "[[objective_table_1]]": [
-                    [
-                        "150-POINT GAME",
-                        "200-POINT GAME",
-                        "250-POINT GAME",
-                        "300-POINT GAME",
-                        "350-POINT GAME",
-                        "400-POINT GAME",
-                        "OBJECTIVE POINTS"
-                    ],
-                    [
-                        "To Kill at least 40 enemy Army Points",
-                        "To Kill at least 50 enemy Army Points",
-                        "To Kill at least 65 enemy Army Points",
-                        "To Kill at least 75 enemy Army Points",
-                        "To Kill at least 85 enemy Army Points",
-                        "To Kill at least 100 enemy Army Points",
-                        "1 Objective Point"
-                    ],
                     [
                         "150-POINT GAME",
                         "200-POINT GAME",
@@ -413,7 +377,7 @@
                 "data_console": "There is 1 Data Console placed in the center of the table. Inside the Data Console is 1 single Data Pack. The Data Console must be represented by a Console A Token or by a scenery piece of the same diameter (such as the Consoles from the ITS Objectives Pack Alpha, the Human Consoles by Micro Art Studio, the Tech Consoles by Warsenal or the Comlink Console by Customeeple).",
                 "extract_data_pack": {
                     "name": "EXTRACT DATA PACK",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with the Data Console.",
                     "effects": "• Allows the Specialist Troop to make a Normal WIP-6 Roll to Extract the Data Pack, with a successful roll a DATA PACK Token must be placed besides it. • If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • If the Data Console is Unlocked, the roll is a Normal WIP roll without the -6 MOD."
                 },
@@ -426,7 +390,7 @@
                 },
                 "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops.",
                 "killing": "Troopers are considered Killed by the adversary when they enter Dead State, or they are in a Null State at the end of the game. Troopers that have not been deployed on the game table, as a Model or Marker, at the end of the game will be considered to be Killed by the adversary.",
-                "intelcom_card": "(SUPPORT AND CONTROL) Before the beginning of the game, but after choosing the first Classified Objective, the player must inform to their adversary if that card will be their Classified Objective or their INTELCOM Card. Each player rolls a die and the one who gets the highest score must be the first who announces their decision to their adversary. The content of the card, whether the mission or the card numeric value, is Private Information, no matter which use the player has chosen for it. At the end of the last Game Round, when the players count up their points and in Initiative order, the player can use their INTELCOM Card in Support and Control Mode. Support and Control Mode: The player can add the value of the Support and Control Card to their Victory Points in the Zone of Operations (ZO) of their choice. The player must have at least one Trooper inside that ZO, in a non-Null State. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
+                "intelcom_card": "(SUPPORT AND CONTROL) Before the beginning of the game, but after choosing the first Classified Objective, the player must inform to their adversary if that card will be their Classified Objective or their INTELCOM Card. Each player rolls a die and the one who gets the highest score must be the first who announces their decision to their adversary. The content of the card, whether the mission or the card numeric value, is Private Information, no matter which use the player has chosen for it. At the end of the last Game Round, when the players count up their points and in Initiative order, the player can use their INTELCOM Card in Support and Control Mode. Support and Control Mode: The player can add the value of the Support and Control Card to their Victory Points in the Zone of Operations (ZO) of their choice. The player must have at least one Trooper inside that ZO, in a non-Null State."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
         },
@@ -497,13 +461,13 @@
                 "antennas": "There are 2 Antennas placed on the central line of the table. They are placed 12 inches from the table edges in 300/350/400 point games, 8 inches in 200/250 point games, and 6 inches in 150 point games (see map). The Antennas must be represented by Transmission Antenna Tokens (TRANS. ANTENNA) or with scenery pieces of the same diameter (such as the Antenna of the ITS Objective Pack Alpha, the Communications Array by Warsenal or the Sat Station Antenna by Customeeple).",
                 "activate_antenna": {
                     "name": "ACTIVATE ANTENNA",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with an Antenna.",
                     "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Activate an Antenna. • If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • An Activated Antenna can be Activated again by the other player, applying the same procedure. In this situation, the Antenna is no longer Activated by the adversary. • Player A and Player B Tokens can be used to mark the Activated Antenna. It is recommended each player uses a different kind of Token. 36"
                 },
                 "superior_deployment": "With the exception of Impersonation, Special Skills with the Superior Deployment Label cannot be used in this scenario.",
                 "secure_hvt_or_secure_treasure_not_used": "In this scenario, the Secure HVT or Secure Treasure rule is not applied.",
-                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
+                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
         },
@@ -572,13 +536,13 @@
                 "extraction_consoles": "There are 2 Extraction Consoles, placed on the central line of the table. They are placed 16 inches from the edges of the table in 300/350/400 point games, 12 inches in 200/250 point games, and 8 inches in 150 point games (see map). Each Console must be represented by a Console A Token or by a scenery piece of the same diameter (such as the Consoles of the ITS Objective Pack Alpha, the Human Consoles by Micro Art Studio, the Tech Consoles by Warsenal or the Comlink Console by Customeeple).",
                 "activate_extraction_console": {
                     "name": "ACTIVATE EXTRACTION CONSOLE",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with an Extraction Console. • The Specialist Troop must be CivEvacing a Civilian or an Enemy HVT. • This Skill cannot be declared during the first Game Round.",
                     "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Activate an Extraction Console. If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • If the roll is successful, the player chooses one of the Specialist Troop’s CivEvaced Civilians or Enemy HVTs. The chosen Civilian or HVT has been Extracted, and is removed from the game table. 39"
                 },
                 "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops.",
                 "operational_learning": "When a Specialist Troop performs a Skill with the Scenario Label that requires a WIP Roll and fails, they benefit from the following MODs in subsequent Orders: ^ In the second consecutive Order, the Trooper applies a +3 MOD to the WIP Roll required for that Scenario Skill. ^ In the third consecutive Order—and subsequent Orders— the Trooper applies +3 and +1SD MODs to the WIP Roll required for that Scenario Skill. ^ These MODs are cumulative with any other MOD that applies to Skills with the Scenario Label.",
-                "important": "These MODs only apply to Rolls made in consecutive Orders by the same Trooper for the same Scenario Skill, with the same target, with no interruptions, or Orders spent on other Troopers: ^ If the Trooper passes the Roll, the sequence resets. ^ If the Trooper do not declare that Scenario Skill, the sequence resets. ^ If the Trooper declare the same Skill, but on a different target, the sequence resets. ^ If an Order is spent on any other Trooper, the sequence resets. ^ Only one sequence can be applied per Trooper and per Scenario-labelled Skill at a time. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
+                "important": "These MODs only apply to Rolls made in consecutive Orders by the same Trooper for the same Scenario Skill, with the same target, with no interruptions, or Orders spent on other Troopers: ^ If the Trooper passes the Roll, the sequence resets. ^ If the Trooper do not declare that Scenario Skill, the sequence resets. ^ If the Trooper declare the same Skill, but on a different target, the sequence resets. ^ If an Order is spent on any other Trooper, the sequence resets. ^ Only one sequence can be applied per Trooper and per Scenario-labelled Skill at a time."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
         },
@@ -647,7 +611,7 @@
                 "beacons": "There are a total of 2 Beacons, 1 corresponding to each player, placed in different halves of the table, each in the middle of the front edge of the Deployment Zone. (see map). The Enemy Beacon is the one on the edge of the enemy Deployment Zone.",
                 "pick_up_beacon": {
                     "name": "PICK UP BEACON",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Have an Activated Console. Also, the Trooper must be in one of the following situations: • The Trooper is in Silhouette contact with a friendly Trooper in a Normal State that has an Enemy Beacon. • The Trooper is in Silhouette contact with an Enemy Beacon which has no enemy Troops in a non-Null State in contact with it.",
                     "effects": "• A Trooper can pick up an Enemy Beacon in any of the situations previously mentioned by spending one Short Skill, without needing to perform a Roll. • The Troopers must follow the Common Rules of Beacons."
                 },
@@ -656,11 +620,11 @@
                 "consoles": "There are three Consoles, placed on the central line of the game table. One of them is in the center of the table, and the other two are placed 12 inches from the table edges in 300/350/400 point games, 8 inches in 200/250 point games, and 6 inches in 150 point games (see map). Each Console must be represented by a Console A Token or by a scenery piece of the same diameter (such as the Consoles of the ITS Objectives Pack Alpha, the Human Consoles by Micro Art Studio, the Tech Consoles by Warsenal or the Comlink Console by Customeeple).",
                 "activate_console": {
                     "name": "ACTIVATE CONSOLE",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with a Console.",
                     "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Activate a Console. • If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • An Activated Console can be Activated again by the other player, applying the same procedure. In this situation, the Console is no longer Activated by the adversary. • Player A and Player B Tokens can be used to mark the Activated Console. It is recommended each player uses a different kind of Tokens."
                 },
-                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
+                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
         },
@@ -748,7 +712,7 @@
                 },
                 "killing": "Troopers are considered Killed by the adversary when they enter Dead State or are in a Null State at the end of the game. Troopers that have not been deployed on the game table, as a Model or Marker, at the end of the game will be considered to be Killed by the adversary. Troopers that have been Extracted are never considered to be Killed by the adversary.",
                 "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops.",
-                "no_quarter": "In this scenario, the Retreat! rules are not applied. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round."
+                "no_quarter": "In this scenario, the Retreat! rules are not applied."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round."
         },
@@ -835,7 +799,7 @@
                     "name": "SAFE AREA"
                 },
                 "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops.",
-                "operational_learning": "When a Specialist Troop performs a Skill with the Scenario Label that requires a WIP Roll and fails, they benefit from the following MODs in subsequent Orders: ^ In the second consecutive Order, the Trooper applies a +3 MOD to the WIP Roll required for that Scenario Skill. ^ In the third consecutive Order—and subsequent Orders— the Trooper applies +3 and +1SD MODs to the WIP Roll required for that Scenario Skill. ^ These MODs are cumulative with any other MOD that applies to Skills with the Scenario Label. IMPORTANT: These MODs only apply to Rolls made in consecutive Orders by the same Trooper for the same Scenario Skill, with the same target, with no interruptions, or Orders spent on other Troopers: ^ If the Trooper passes the Roll, the sequence resets. ^ If the Trooper do not declare that Scenario Skill, the sequence resets. ^ If the Trooper declare the same Skill, but on a different target, the sequence resets. ^ If an Order is spent on any other Trooper, the sequence resets. ^ Only one sequence can be applied per Trooper and per Scenario-labelled Skill at a time. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
+                "operational_learning": "When a Specialist Troop performs a Skill with the Scenario Label that requires a WIP Roll and fails, they benefit from the following MODs in subsequent Orders: ^ In the second consecutive Order, the Trooper applies a +3 MOD to the WIP Roll required for that Scenario Skill. ^ In the third consecutive Order—and subsequent Orders— the Trooper applies +3 and +1SD MODs to the WIP Roll required for that Scenario Skill. ^ These MODs are cumulative with any other MOD that applies to Skills with the Scenario Label. IMPORTANT: These MODs only apply to Rolls made in consecutive Orders by the same Trooper for the same Scenario Skill, with the same target, with no interruptions, or Orders spent on other Troopers: ^ If the Trooper passes the Roll, the sequence resets. ^ If the Trooper do not declare that Scenario Skill, the sequence resets. ^ If the Trooper declare the same Skill, but on a different target, the sequence resets. ^ If an Order is spent on any other Trooper, the sequence resets. ^ Only one sequence can be applied per Trooper and per Scenario-labelled Skill at a time."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
         },
@@ -910,7 +874,7 @@
                 "dominate_zo": "A Zone of Operations (ZO) is Dominated by a player if they have more Victory Points than the adversary inside the area. Only Troopers represented by Models or Markers (Camouflaged, Shasvastii-Embryo...) count, as well as Proxies and Peripheral Troops. Troops in a Null State do not count. Tokens representing weapons or pieces of equipment (like Mines or Deployable Repeaters), fake Holoechoes, and any Token that does not represent a Trooper does not count either. A Trooper is inside a Zone of Operations when more than half the Trooper’s base is inside that ZO.",
                 "shasvastii": "Troopers possessing the Shasvastii Special Skill that are inside a Zone of Operations count while they are in Unconscious State or any non-Null State. 50",
                 "baggage": "Troopers possessing the Baggage piece of Equipment that are inside a Zone of Operations and in a non-Null State provide an additional 20 Victory Points for Dominating the ZO.",
-                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops. INTELCOM CARD (SUPPORT AND CONTROL) Before the beginning of the game, but after choosing the first Classified Objective, the player must inform to their adversary if that card will be their Classified Objective or their INTELCOM Card. Each player rolls a die and the one who gets the highest score must be the first who announces their decision to their adversary. The content of the card, whether the mission or the card numeric value, is Private Information, no matter which use the player has chosen for it. At the end of the last Game Round, when the players count up their points and in Initiative order, the player can use their INTELCOM Card in Support and Control Mode. Support and Control Mode: The player can add the value of the Support and Control Card to their Victory Points in the Zone of Operations (ZO) of their choice. The player must have at least one Trooper inside that ZO, in a non-Null State. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
+                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops. INTELCOM CARD (SUPPORT AND CONTROL) Before the beginning of the game, but after choosing the first Classified Objective, the player must inform to their adversary if that card will be their Classified Objective or their INTELCOM Card. Each player rolls a die and the one who gets the highest score must be the first who announces their decision to their adversary. The content of the card, whether the mission or the card numeric value, is Private Information, no matter which use the player has chosen for it. At the end of the last Game Round, when the players count up their points and in Initiative order, the player can use their INTELCOM Card in Support and Control Mode. Support and Control Mode: The player can add the value of the Support and Control Card to their Victory Points in the Zone of Operations (ZO) of their choice. The player must have at least one Trooper inside that ZO, in a non-Null State."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
         },
@@ -987,7 +951,7 @@
             },
             "tactical_support_options": 0,
             "suitable_for_reinforcements": true,
-            "mission_objectives": ["[[objective_table_0]] 52"],
+            "mission_objectives": ["[[objective_table_0]]"],
             "forces_and_deployment": {
                 "sides": "SIDE A and SIDE B",
                 "deployment_table": [
@@ -1027,7 +991,7 @@
             "scenario_special_rules": {
                 "killing": "Troopers are considered Killed by the adversary when they enter Dead State, or they are in a Null State at the end of the game. Troopers that have not been deployed on the game table, as a Model or Marker, at the end of the game will be considered to be Killed by the adversary.",
                 "no_quarter": "In this scenario, the Retreat! rules are not applied.",
-                "hvt_and_classified_deck_not_used": "In this scenario, the HVT Model and Secure HVT rules are not applied. Players will not deploy the HVT Model on the game table and they will not use the Classified Deck in this scenario. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round."
+                "hvt_and_classified_deck_not_used": "In this scenario, the HVT Model and Secure HVT rules are not applied. Players will not deploy the HVT Model on the game table and they will not use the Classified Deck in this scenario."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round."
         },
@@ -1093,7 +1057,7 @@
                 "killing": "Troopers are considered Killed by the adversary when they enter Dead State, or they are in a Null State at the end of the game. Troopers that have not been deployed on the game table, as a Model or Marker, at the end of the game will be considered to be Killed by the adversary.",
                 "key_ops": "The Key Ops is a special tactics operator with unique training to conduct multi-domain reconnaissance and combat across the full spectrum of conflicts. At the end of the Deployment Phase, in Initiative order, players must declare which Trooper from their Army List is their Key Ops. The Trooper chosen must be always one of the models deployed on the game table. Players are not allowed to choose Troopers in Hidden Deployment or in Marker state. This Trooper must always be on the game table as a Model and not as a Marker (Camouflaged, Holoecho…). Also, Irregular Troops and those whose Troop Type is REM or VH are not eligible to be Key Ops. The Key Ops possesses the Dodge (+3) and Tactical Awareness Special Skills, even if those are not listed on their Unit Profile. These Special Skills are not cumulative, if the Trooper already has them, then they are not applied. The Key Ops is identified with a Player A or B Marker.",
                 "threaten_key_ops": "A Key Ops is Threatened by a player if they have at least one Trooper (as a Model, not a Marker) in a non-Null state inside the Key Ops’ Zone of Control.",
-                "hvt_and_classified_deck_not_used": "In this scenario, the HVT Model and Secure HVT rules are not applied. Players will not deploy the HVT Model on the game table and they will not use the Classified Deck in this scenario. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round."
+                "hvt_and_classified_deck_not_used": "In this scenario, the HVT Model and Secure HVT rules are not applied. Players will not deploy the HVT Model on the game table and they will not use the Classified Deck in this scenario."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round."
         },
@@ -1157,7 +1121,7 @@
                 "key_ops": "The Key Ops is a special tactics operator with unique training to conduct multi-domain reconnaissance and combat across the full spectrum of conflicts. At the end of the Deployment Phase, in Initiative order, players must declare which Trooper from their Army List is their Key Ops. The Trooper chosen must be always one of the models deployed on the game table. Players are not allowed to choose Troopers in Hidden Deployment or in Marker state. This Trooper must always be on the game table as a Model and not as a Marker (Camouflaged, Holoecho…). Also, Irregular Troops and those whose Troop Type is REM or VH are not eligible to be Key Ops. The Key Ops possesses the Dodge (+3) and Tactical Awareness Special Skills, even if those are not listed on their Unit Profile. These Special Skills are not cumulative, if the Trooper already has them, then they are not applied. The Key Ops is identified with a Player A or B Marker.",
                 "killing": "Troopers are considered Killed by the adversary when they enter Dead State, or they are in a Null State at the end of the game. Troopers that have not been deployed on the game table, as a Model or Marker, at the end of the game will be considered to be Killed by the adversary. The Key Ops counts as Killing a target if they cause the target to be in a Null State at the end of the game, or if they cause the loss of one or more Wounds/STR points during the Order in which the target enters Dead State. A Lieutenant is considered Killed if they were a Lieutenant at any time during the game, and they either enter Dead State or are in a Null State at the end of the game.",
                 "no_quarter": "In this scenario, the Retreat! rules are not applied.",
-                "hvt_and_classified_deck_not_used": "In this scenario, the HVT Model and Secure HVT rules are not applied. Players will not deploy the HVT Model on the game table and they will not use the Classified Deck in this scenario. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round."
+                "hvt_and_classified_deck_not_used": "In this scenario, the HVT Model and Secure HVT rules are not applied. Players will not deploy the HVT Model on the game table and they will not use the Classified Deck in this scenario."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round."
         },
@@ -1221,7 +1185,7 @@
                 "consoles": "There are 4 Consoles, placed on the center of each Quadrant (See map). Each Console must be represented by a Console A Token or by a scenery piece of the same diameter (such as the Consoles of the ITS Objective Pack Alpha, the Human Consolesby Micro Art Studio, the Tech Consoles by Warsenal or the Comlink Console by Customeeple).",
                 "hack_consoles": {
                     "name": "HACK CONSOLES",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with a Console.",
                     "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Hack the Console. • If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • A Hacked Console can be Hacked again by the other player applying the same procedure. In this case, both players will count that Console as Hacked. • Player A and Player B Tokens can be used to mark the Hacked Consoles. It is recommended each player uses a different kind of Tokens."
                 },
@@ -1229,7 +1193,7 @@
                 "operational_learning": "When a Specialist Troop performs a Skill with the Scenario Label that requires a WIP Roll and fails, they benefit from the following MODs in subsequent Orders: ^ In the second consecutive Order, the Trooper applies a +3 MOD to the WIP Roll required for that Scenario Skill. ^ In the third consecutive Order—and subsequent Orders— the Trooper applies +3 and +1SD MODs to the WIP Roll required for that Scenario Skill. ^ These MODs are cumulative with any other MOD that applies to Skills with the Scenario Label. IMPORTANT: These MODs only apply to Rolls made in consecutive Orders by the same Trooper for the same Scenario Skill, with the same target, with no interruptions, or Orders spent on other Troopers: ^ If the Trooper passes the Roll, the sequence resets. ^ If the Trooper do not declare that Scenario Skill, the sequence resets. ^ If the Trooper declare the same Skill, but on a different target, the sequence resets. ^ If an Order is spent on any other Trooper, the sequence resets. ^ Only one sequence can be applied per Trooper and per Scenario-labelled Skill at a time.",
                 "key_ops": "The Key Ops is a special tactics operator with unique training to conduct multi-domain reconnaissance and combat across the full spectrum of conflicts. At the end of the Deployment Phase, in Initiative order, players must declare which Trooper from their Army List is their Key Ops. The Trooper chosen must be always one of the models deployed on the game table. Players are not allowed to choose Troopers in Hidden Deployment or in Marker state. This Trooper must always be on the game table as a Model and not as a Marker (Camouflaged, Holoecho…). Also, Irregular Troops and those whose Troop Type is REM or VH are not eligible to be Key Ops. The Key Ops possesses the Dodge (+3) and Tactical Awareness Special Skills, even if those are not listed on their Unit Profile. These Special Skills are not cumulative, if the Trooper already has them, then they are not applied. The Key Ops is identified with a Player A or B Marker.",
                 "dominant_key_ops": "Players who have their Key Ops in any non-Null State in a ZO Dominated by them, have a Dominant Key Ops.",
-                "hvt_and_classified_deck_not_used": "In this scenario, the HVT Model and Secure HVT rules are not applied. Players will not deploy the HVT Model on the game table and they will not use the Classified Deck in this scenario. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
+                "hvt_and_classified_deck_not_used": "In this scenario, the HVT Model and Secure HVT rules are not applied. Players will not deploy the HVT Model on the game table and they will not use the Classified Deck in this scenario."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
         },
@@ -1303,7 +1267,7 @@
                 "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops. 62",
                 "operational_learning": "When a Specialist Troop performs a Skill with the Scenario Label that requires a WIP Roll and fails, they benefit from the following MODs in subsequent Orders: In the second consecutive Order, the Trooper applies a +3 MOD to the WIP Roll required for that Scenario Skill. In the third consecutive Order—and subsequent Orders—the Trooper applies +3 and +1SD MODs to the WIP Roll required for that Scenario Skill. These MODs are cumulative with any other MOD that applies to Skills with the Scenario Label. IMPORTANT: These MODs only apply to Rolls made in consecutive Orders by the same Trooper for the same Scenario Skill, with the same target, with no interruptions, or Orders spent on other Troopers: If the Trooper passes the Roll, the sequence resets. If the Trooper do not declare that Scenario Skill, the sequence resets. If the Trooper declares the same Skill, but with a different target, the sequence resets. If an Order is spent on any other Trooper, the sequence resets. Only one sequence can be applied per Trooper and per Scenario-Labelled Skill at a time.",
                 "active_lieutenant": "At the end of the game, a Lieutenant is Active if they are not in any Null state (Unconscious, Dead, Sepsitorized…), Isolated State, or any Immobilized State.",
-                "hvt_and_classified_deck_not_used": "In this scenario, the HVT Model and Secure HVT rules are not applied. Players will not deploy the HVT Model on the game table and they will not use the Classified Deck in this scenario. END OF THE MISSION This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
+                "hvt_and_classified_deck_not_used": "In this scenario, the HVT Model and Secure HVT rules are not applied. Players will not deploy the HVT Model on the game table and they will not use the Classified Deck in this scenario."
             },
             "end_of_mission": "This scenario has a limited time frame, so it will automatically finish at the end of the third Game Round. If one of the players starts their Active Turn in a Retreat! situation, the game will end at the end of that Turn."
         }

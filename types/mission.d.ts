@@ -17,13 +17,15 @@ export type ScenarioSpecialRule =
     | MissionSkill
     | Record<string, string>;
 
+export type MissionObjectives = Record<string, Array<string>> | Array<string>;
+
 export type MissionData = {
     name: string;
     type: 'ITS Scenario' | 'Direct Action' | 'Custom';
     tables: Record<string, Array<Array<string>>>;
     tactical_support_options: number;
     suitable_for_reinforcements: boolean;
-    mission_objectives: Record<string, Array<string>> | Array<string>;
+    mission_objectives: MissionObjectives;
     forces_and_deployment: {
         sides: string;
         deployment_table: Array<DeploymentTableEntry>;

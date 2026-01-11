@@ -7,8 +7,9 @@ import { useSeasons } from '@/stores/useSeasons';
 import { Separator } from './ui/separator';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Alert, AlertDescription, AlertTitle } from './ui/alert';
-import { AlertOctagonIcon, Car } from 'lucide-react';
+import { AlertOctagonIcon } from 'lucide-react';
 import ScenarioRule from './scenario_rule';
+import Objectives from './objectives';
 
 type Props = HTMLProps<HTMLDivElement> & {
     seasonKey: string;
@@ -45,12 +46,12 @@ export default function MissionDisplay({
     }
 
     return (
-        <div {...props}>
+        <div className="max-w-full" {...props}>
             <h1 className="text-2xl sm:text-4xl md:text-6xl font-decorative">
                 {mission.name}
             </h1>
             <Separator className="my-4" />
-            <div className="grid gap-8">
+            <div className="grid gap-8 w-full">
                 <div className="flex justify-center gap-2 flex-wrap">
                     <Badge variant="outline">{mission.type}</Badge>
                     {(mission.suitable_for_reinforcements && (
@@ -71,43 +72,10 @@ export default function MissionDisplay({
                     )}
                 </div>
 
-                <Card>
-                    <CardHeader>
-                        <CardTitle className="text-2xl">
-                            Mission Objectives
-                        </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        {Array.isArray(mission.mission_objectives) ? (
-                            <ul className="list-disc list-inside mt-2 text-left">
-                                {mission.mission_objectives.map(
-                                    (objective, index) => (
-                                        <li key={index}>{objective}</li>
-                                    )
-                                )}
-                            </ul>
-                        ) : (
-                            Object.entries(mission.mission_objectives).map(
-                                ([side, objectives]) => (
-                                    <div key={side} className="mb-4">
-                                        <h3 className="text-lg font-semibold mb-2">
-                                            {fromKey(side)}
-                                        </h3>
-                                        <ul className="list-disc list-inside text-left">
-                                            {objectives.map(
-                                                (objective, index) => (
-                                                    <li key={index}>
-                                                        {objective}
-                                                    </li>
-                                                )
-                                            )}
-                                        </ul>
-                                    </div>
-                                )
-                            )
-                        )}
-                    </CardContent>
-                </Card>
+                <Objectives
+                    objectivesData={mission.mission_objectives}
+                    tables={mission.tables}
+                />
 
                 <Card>
                     <CardHeader>
@@ -119,16 +87,16 @@ export default function MissionDisplay({
                         <table className="mx-auto w-fit table-auto border-collapse mb-4 border-foreground text-sm sm:text-base">
                             <thead>
                                 <tr className="bg-accent text-accent-foreground">
-                                    <th className="border p-1 sm:px-2 md:px-4">
+                                    <th className="border p-1 sm:px-2 md:px-4 border-card-foreground">
                                         Army Points
                                     </th>
-                                    <th className="border p-1 sm:px-2 md:px-4">
+                                    <th className="border p-1 sm:px-2 md:px-4 border-card-foreground">
                                         SWC
                                     </th>
-                                    <th className="border p-1 sm:px-2 md:px-4">
+                                    <th className="border p-1 sm:px-2 md:px-4 border-card-foreground">
                                         Table Size
                                     </th>
-                                    <th className="border p-1 sm:px-2 md:px-4">
+                                    <th className="border p-1 sm:px-2 md:px-4 border-card-foreground">
                                         Deployment Zone
                                     </th>
                                 </tr>
