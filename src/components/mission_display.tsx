@@ -7,8 +7,8 @@ import { useSeasons } from '@/stores/useSeasons';
 import { Separator } from './ui/separator';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Alert, AlertDescription, AlertTitle } from './ui/alert';
-import { AlertOctagonIcon } from 'lucide-react';
-import { isMissionSkill } from '@/lib/utils';
+import { AlertOctagonIcon, Car } from 'lucide-react';
+import ScenarioRule from './scenario_rule';
 
 type Props = HTMLProps<HTMLDivElement> & {
     seasonKey: string;
@@ -173,51 +173,26 @@ export default function MissionDisplay({
                     </CardContent>
                 </Card>
 
-                <h2 className="text-2xl font-decorative">
-                    Scenario Special Rules
-                </h2>
-                <div className="space-y-4 text-left">
-                    {Object.entries(mission.scenario_special_rules).map(
-                        ([key, value]) => (
-                            <div
-                                key={key}
-                                className="border-l-4 border-accent pl-4">
-                                <p className="font-medium">{fromKey(key)}</p>
-                                {isMissionSkill(value) ? (
-                                    <div className="mt-2 space-y-1">
-                                        <p>
-                                            <strong>Type:</strong>{' '}
-                                            {value.skill_type}
-                                        </p>
-                                        <p>
-                                            <strong>Requirements:</strong>{' '}
-                                            {value.requirements}
-                                        </p>
-                                        <p>
-                                            <strong>Effects:</strong>{' '}
-                                            {value.effects}
-                                        </p>
-                                    </div>
-                                ) : typeof value === 'string' ? (
-                                    <p>{value}</p>
-                                ) : (
-                                    Object.entries(value).map(
-                                        ([subKey, subValue]) => (
-                                            <div
-                                                key={subKey}
-                                                className="mt-2 space-y-1">
-                                                <p className="font-semibold">
-                                                    {fromKey(subKey)}
-                                                </p>
-                                                <p>{subValue}</p>
-                                            </div>
-                                        )
-                                    )
-                                )}
-                            </div>
-                        )
-                    )}
-                </div>
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-2xl">
+                            Scenario Special Rules
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="space-y-6 sm:space-y-10 text-left">
+                            {Object.entries(mission.scenario_special_rules).map(
+                                ([key, value]) => (
+                                    <ScenarioRule
+                                        name={fromKey(key)}
+                                        ruleData={value}
+                                        key={key}
+                                    />
+                                )
+                            )}
+                        </div>
+                    </CardContent>
+                </Card>
 
                 <Card>
                     <CardHeader>
