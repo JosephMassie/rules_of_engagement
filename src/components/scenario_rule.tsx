@@ -35,7 +35,7 @@ export default function ScenarioRule({ name, ruleData, ...props }: Props) {
                     'bg-accent text-accent-foreground': !isShortSkill,
                 })}
                 {...props}>
-                <h4 className="text-xl font-semibold">
+                <h4 className="text-xl font-semibold capitalize">
                     {name}{' '}
                     <span className="text-sm uppercase tracking-wider">
                         : {isShortSkill ? 'Short Skill' : 'Long Skill'}
@@ -117,7 +117,7 @@ export default function ScenarioRule({ name, ruleData, ...props }: Props) {
 
     return (
         <div className="border-l-4 border-accent pl-4" {...props}>
-            <h4 className="text-xl font-semibold tracking-wide">{name}</h4>
+            <h4 className="text-xl font-semibold tracking-wide capitalize">{name}</h4>
             {typeof ruleData === 'string' ? (
                 <p className="">{ruleData}</p>
             ) : (
