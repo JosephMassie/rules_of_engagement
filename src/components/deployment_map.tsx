@@ -229,9 +229,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                                         ) /
                                             longestSide) *
                                         100;
-                                    angle =
-                                        Math.atan2(height, width) *
-                                        (180 / Math.PI);
+                                    angle = Math.atan2(width, height);
                                     return (
                                         <div
                                             key={key}
@@ -246,7 +244,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                                                     position,
                                                     dimensions
                                                 ),
-                                                transform: `rotate(${angle}deg)`,
+                                                transform: `rotate(${angle}rad)`,
                                             }}></div>
                                     );
                                 case 'diag-line-flipped':
@@ -258,13 +256,13 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                                         ) /
                                             longestSide) *
                                         100;
-                                    angle = Math.atan2(height, width);
+                                    angle = Math.atan2(width, height);
                                     return (
                                         <div
                                             key={key}
                                             datatype="zone"
                                             className={clsx(
-                                                'absolute w-px origin-top-left',
+                                                'absolute w-px -translate-1/2',
                                                 color
                                             )}
                                             style={{

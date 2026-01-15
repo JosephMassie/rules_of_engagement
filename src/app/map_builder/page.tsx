@@ -49,10 +49,18 @@ export default function MapBuilder() {
             },
             {
                 name: 'center-line',
-                position: [0, 0],
+                position: [16, 24],
                 size: 1,
                 color: 'bg-black',
                 shape: 'diag-line-flipped',
+                excludeKey: true,
+            },
+            {
+                name: 'center-line',
+                position: [16, 24],
+                size: 1,
+                color: 'bg-black',
+                shape: 'diag-line',
                 excludeKey: true,
             },
             {
