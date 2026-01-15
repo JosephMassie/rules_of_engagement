@@ -1,3 +1,36 @@
+export type GameSize = '150P' | '200P / 250P' | '300P / 350P / 400P';
+
+export type MapPosition = [number, number];
+
+export type DeploymentMap = {
+    zones: Array<{
+        name: string;
+        shortName?: boolean;
+        color: string;
+        position: MapPosition;
+        size: number;
+        shape:
+            | 'full-width'
+            | 'circle'
+            | 'box'
+            | 'horiz-line'
+            | 'vert-line'
+            | 'diag-line'
+            | 'diag-line-flipped';
+        excludeKey?: boolean;
+        hideName?: boolean;
+    }>;
+    objects: Array<{
+        name: string;
+        position: MapPosition;
+        size: number;
+        color: string;
+        excludeKey?: boolean;
+    }>;
+    gameSizes: GameSize;
+    measurements?: Array<{ length: string; position: string }>;
+};
+
 export type DeploymentTableEntry = {
     army_points: number;
     swc: number;
@@ -30,6 +63,7 @@ export type MissionData = {
         sides: string;
         deployment_table: Array<DeploymentTableEntry>;
         special_notes: Array<string>;
+        map?: Array<DeploymentMap>;
     };
     scenario_special_rules: Record<string, ScenarioSpecialRule>;
     end_of_mission: string;

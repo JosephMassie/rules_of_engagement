@@ -164,3 +164,20 @@
     --radius-3xl: calc(var(--radius) + 12px);
     --radius-4xl: calc(var(--radius) + 16px);
 }
+
+@layer components {
+    .exclusion-zone {
+        border: 1px solid var(--color-red-700);
+        background: repeating-linear-gradient(
+            135deg,
+            hsla(0, 0, 0, 0),
+            hsla(0, 0, 0, 0) 5px,
+            var(--color-red-800) 5px,
+            var(--color-red-800) 10px
+        );
+    }
+
+    .obj-room {
+        border: 3px solid var(--color-black);
+    }
+}
