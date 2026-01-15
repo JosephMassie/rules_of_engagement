@@ -6,7 +6,7 @@ import DeploymentMapDisplay from '@/components/deployment_map';
 
 export default function MapBuilder() {
     const [map, setMap] = useState<DeploymentMap | null>({
-        gameSizes: '200P / 250P',
+        gameSizes: '300P / 350P / 400P',
         zones: [
             {
                 name: 'Deployment Zone A',
@@ -16,7 +16,7 @@ export default function MapBuilder() {
                 shape: 'circle',
             },
             {
-                name: 'Deployment Zone B (Defender)',
+                name: 'Deployment Zone B',
                 position: [0, 48],
                 size: 48,
                 color: 'bg-green-900 text-white',
@@ -41,7 +41,7 @@ export default function MapBuilder() {
             },
             {
                 name: 'center-line',
-                position: [16, 0],
+                position: [24, 0],
                 size: 1,
                 color: 'bg-black',
                 shape: 'vert-line',
@@ -49,7 +49,7 @@ export default function MapBuilder() {
             },
             {
                 name: 'center-line',
-                position: [16, 24],
+                position: [24, 24],
                 size: 1,
                 color: 'bg-black',
                 shape: 'diag-line-flipped',
@@ -57,7 +57,7 @@ export default function MapBuilder() {
             },
             {
                 name: 'center-line',
-                position: [16, 24],
+                position: [24, 24],
                 size: 1,
                 color: 'bg-black',
                 shape: 'diag-line',
@@ -87,6 +87,32 @@ export default function MapBuilder() {
                 color: 'bg-green-300',
             },
         ],
+        rulers: [
+            {
+                length: 24,
+                placement: 'left',
+                start: [0, 24],
+                end: [0, 48],
+            },
+            {
+                length: 24,
+                placement: 'top',
+                start: [24, 0],
+                end: [48, 0],
+            },
+            {
+                length: 12,
+                placement: 'right',
+                start: [48, 0],
+                end: [48, 12],
+            },
+            {
+                length: 8,
+                placement: 'bottom',
+                start: [48, 48],
+                end: [40, 48],
+            },
+        ],
     });
 
     return (
@@ -94,7 +120,7 @@ export default function MapBuilder() {
             <h1 className="mb-8 text-2xl md:text-3xl font-decorative">
                 Deployment Map Builder
             </h1>
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center justify-center">
                 <DeploymentMapDisplay map={map} />
             </div>
         </>

@@ -28,7 +28,12 @@ export type DeploymentMap = {
         excludeKey?: boolean;
     }>;
     gameSizes: GameSize;
-    measurements?: Array<{ length: string; position: string }>;
+    rulers?: Array<{
+        length: number;
+        placement: 'left' | 'right' | 'top' | 'bottom' | 'inside';
+        start?: MapPosition;
+        end: MapPosition;
+    }>;
 };
 
 export type DeploymentTableEntry = {
