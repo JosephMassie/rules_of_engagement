@@ -5,6 +5,7 @@ import { Vector2D } from '@/lib/vector';
 
 type Props = HTMLProps<HTMLDivElement> & {
     map: DeploymentMap | null;
+    hideGameSize?: boolean;
 };
 
 const MAP_SIZES = {
@@ -25,7 +26,7 @@ const MapBase = ({
     return (
         <div
             className={clsx(
-                'w-[80vw] max-w-55 2xs:max-w-65 bg-stone-200 text-black border border-black box-content relative overflow-hidden',
+                'w-[80vw] max-w-55 2xs:max-w-65 bg-stone-200 text-black border border-black box-content relative overflow-hidden max-xs:text-xs',
                 className,
                 {
                     'xs:max-w-120': ratio === 1,
@@ -71,7 +72,11 @@ const sizeToCss = (objSize: MapPosition, dimensions: MapPosition) => {
     };
 };
 
-const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
+const DeploymentMapDisplay: React.FC<Props> = ({
+    map,
+    hideGameSize = false,
+    ...props
+}) => {
     if (!map) {
         return <MapBase dimensions={[48, 48]} {...props}></MapBase>;
     }
@@ -80,10 +85,19 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
     const [mapWidth, mapHeight] = dimensions;
     const longestSide = mapWidth >= mapHeight ? mapWidth : mapHeight;
 
+    const hasTopRulers =
+        map.rulers?.some(({ placement }) => placement === 'top') ?? false;
+
     return (
         <>
-            <div className="mb-8">
-                <h3 className="font-semibold">{map.gameSizes}</h3>
+            <div
+                className={clsx({
+                    'mb-2': !hasTopRulers,
+                    'mb-8': hasTopRulers,
+                })}>
+                {!hideGameSize && (
+                    <h3 className="font-semibold">{map.gameSizes}</h3>
+                )}
                 <p className="font-extralight text-sm">
                     {`${mapWidth}"`} x {`${mapHeight}"`}
                 </p>
@@ -184,7 +198,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                                                         dimensions
                                                     ),
                                                     ...sizeToCss(
-                                                        [size*2, size*2],
+                                                        [size * 2, size * 2],
                                                         dimensions
                                                     ),
                                                 }}>
@@ -305,19 +319,25 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                     </div>
                     <div className="z-10">
                         {map.objects.map(
-                            ({ name, position, size, color }, i) => (
-                                <div
-                                    key={`${name}-${i}`}
-                                    data-type="object"
-                                    className={clsx(
-                                        'absolute rounded-full -translate-1/2',
-                                        `size-${size}`,
-                                        color
-                                    )}
-                                    style={{
-                                        ...positionToCss(position, dimensions),
-                                    }}></div>
-                            )
+                            ({ name, position, size, color }, i) => {
+                                console.log(`position`, position);
+                                return (
+                                    <div
+                                        key={`${name}-${i}`}
+                                        data-type="object"
+                                        className={clsx(
+                                            'absolute rounded-full -translate-1/2',
+                                            `size-${size}`,
+                                            color
+                                        )}
+                                        style={{
+                                            ...positionToCss(
+                                                position,
+                                                dimensions
+                                            ),
+                                        }}></div>
+                                );
+                            }
                         )}
                     </div>
                 </MapBase>

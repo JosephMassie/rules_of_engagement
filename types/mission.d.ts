@@ -67,7 +67,7 @@ export type MissionData = {
         sides: string;
         deployment_table: Array<DeploymentTableEntry>;
         special_notes: Array<string>;
-        map?: Array<DeploymentMap>;
+        maps?: Array<DeploymentMap>;
     };
     scenario_special_rules: Record<string, ScenarioSpecialRule>;
     end_of_mission: string;

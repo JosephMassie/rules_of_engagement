@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import type { DeploymentMap } from '../../../types/mission';
 import DeploymentMapDisplay from '@/components/deployment_map';
-import { Vector2D } from '@/lib/vector';
 
 export default function MapBuilder() {
     const [map, setMap] = useState<DeploymentMap | null>({
@@ -37,12 +36,7 @@ export default function MapBuilder() {
         objects: [
             {
                 name: 'Tech-Coffin',
-                position: new Vector2D(23, 23)
-                    .subtract(new Vector2D(24, 24))
-                    .normalize()
-                    .multiplyScalar(16)
-                    .add(new Vector2D(24, 24))
-                    .toArray(),
+                position: [12.68, 12.68],
                 size: 4,
                 color: 'bg-purple-800',
             },
@@ -54,12 +48,7 @@ export default function MapBuilder() {
             },
             {
                 name: 'Tech-Coffin',
-                position: new Vector2D(25, 25)
-                    .subtract(new Vector2D(24, 24))
-                    .normalize()
-                    .multiplyScalar(16)
-                    .add(new Vector2D(24, 24))
-                    .toArray(),
+                position: [35.31, 35.31],
                 size: 4,
                 color: 'bg-purple-800',
             },
