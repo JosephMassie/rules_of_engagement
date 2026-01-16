@@ -31,6 +31,14 @@ export default function MapBuilder() {
                 shape: 'diag-line-flipped',
                 excludeKey: true,
             },
+            {
+                name: 'exclusion-zone',
+                position: [0, 20],
+                size: 8,
+                color: 'exclusion-zone',
+                shape: 'full-width',
+                hideName: true,
+            },
         ],
         objects: [
             {

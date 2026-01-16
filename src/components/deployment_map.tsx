@@ -417,6 +417,40 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                     );
                 })}
             </div>
+            <div className="mt-8 flex flex-wrap gap-4 items-center justify-center text-sm sm:text-base">
+                {map.zones
+                    .filter(({ excludeKey }) => !excludeKey)
+                    .map(({ name, shortName, color }) => {
+                        return (
+                            <div
+                                key={`zone_legend_${name}`}
+                                data-type="zone"
+                                className="flex leading-none">
+                                <span
+                                    className={clsx(
+                                        'mr-2 inline-block w-[1em] h-[1em]',
+                                        color
+                                    )}></span>
+                                {shortName ?? name}
+                            </div>
+                        );
+                    })}
+                {map.objects
+                    .filter(({ excludeKey }) => !excludeKey)
+                    .map(({ name, color }) => (
+                        <div
+                            key={`object_legend_${name}`}
+                            data-type="object"
+                            className="flex leading-none">
+                            <span
+                                className={clsx(
+                                    'mr-2 inline-block w-[1em] h-[1em] rounded-full',
+                                    color
+                                )}></span>
+                            {name}
+                        </div>
+                    ))}
+            </div>
         </>
     );
 };
