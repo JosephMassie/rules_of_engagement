@@ -165,6 +165,11 @@
     --radius-4xl: calc(var(--radius) + 16px);
 }
 
+@theme {
+    --breakpoint-2xs: 22rem;
+    --breakpoint-xs: 26rem;
+}
+
 @layer components {
     .exclusion-zone {
         border: 1px solid var(--color-red-700);

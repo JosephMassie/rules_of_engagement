@@ -29,9 +29,9 @@ export type DeploymentMap = {
     }>;
     gameSizes: GameSize;
     rulers?: Array<{
-        length: number;
+        length?: number;
         placement: 'left' | 'right' | 'top' | 'bottom' | 'inside';
-        start?: MapPosition;
+        start: MapPosition;
         end: MapPosition;
     }>;
 };
