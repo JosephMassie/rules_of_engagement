@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import type { DeploymentMap } from '../../../types/mission';
 import DeploymentMapDisplay from '@/components/deployment_map';
+import { Vector2D } from '@/lib/vector';
 
 export default function MapBuilder() {
     const [map, setMap] = useState<DeploymentMap | null>({
@@ -11,17 +12,18 @@ export default function MapBuilder() {
             {
                 name: 'Deployment Zone A',
                 position: [48, 0],
-                size: 48,
+                size: 24,
                 color: 'bg-amber-500',
                 shape: 'circle',
+                excludeLegend: true,
             },
             {
                 name: 'Deployment Zone B',
                 position: [0, 48],
-                size: 48,
+                size: 24,
                 color: 'bg-green-900 text-white',
                 shape: 'circle',
-                excludeKey: true,
+                excludeLegend: true,
             },
             {
                 name: 'center-line',
@@ -29,51 +31,44 @@ export default function MapBuilder() {
                 size: 1,
                 color: 'bg-black',
                 shape: 'diag-line-flipped',
-                excludeKey: true,
-            },
-            {
-                name: 'exclusion-zone',
-                position: [0, 20],
-                size: 8,
-                color: 'exclusion-zone',
-                shape: 'full-width',
-                hideName: true,
+                excludeLegend: true,
             },
         ],
         objects: [
             {
-                name: 'Beacon A',
-                position: [24, 12],
-                size: 2,
-                color: 'bg-pink-500',
+                name: 'Tech-Coffin',
+                position: new Vector2D(23, 23)
+                    .subtract(new Vector2D(24, 24))
+                    .normalize()
+                    .multiplyScalar(16)
+                    .add(new Vector2D(24, 24))
+                    .toArray(),
+                size: 4,
+                color: 'bg-purple-800',
             },
             {
-                name: 'Antenna',
+                name: 'Tech-Coffin',
                 position: [24, 24],
                 size: 4,
-                color: 'bg-green-300',
+                color: 'bg-purple-800',
+            },
+            {
+                name: 'Tech-Coffin',
+                position: new Vector2D(25, 25)
+                    .subtract(new Vector2D(24, 24))
+                    .normalize()
+                    .multiplyScalar(16)
+                    .add(new Vector2D(24, 24))
+                    .toArray(),
+                size: 4,
+                color: 'bg-purple-800',
             },
         ],
         rulers: [
             {
-                placement: 'left',
-                start: [0, 24],
-                end: [0, 48],
-            },
-            {
-                placement: 'top',
-                start: [24, 0],
-                end: [48, 0],
-            },
-            {
-                placement: 'right',
-                start: [48, 0],
-                end: [48, 12],
-            },
-            {
                 placement: 'bottom',
-                start: [48, 48],
-                end: [40, 48],
+                start: [24, 48],
+                end: [0, 48],
             },
             {
                 length: 16,

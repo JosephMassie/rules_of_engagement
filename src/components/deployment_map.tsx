@@ -184,7 +184,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                                                         dimensions
                                                     ),
                                                     ...sizeToCss(
-                                                        [size, size],
+                                                        [size*2, size*2],
                                                         dimensions
                                                     ),
                                                 }}>
@@ -418,7 +418,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
             </div>
             <div className="mt-8 flex flex-wrap gap-4 items-center justify-center text-sm sm:text-base">
                 {map.zones
-                    .filter(({ excludeKey }) => !excludeKey)
+                    .filter(({ excludeLegend }) => !excludeLegend)
                     .map(({ name, color }) => {
                         return (
                             <div
@@ -435,7 +435,11 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                         );
                     })}
                 {map.objects
-                    .filter(({ excludeKey }) => !excludeKey)
+                    .filter(({ excludeLegend }) => !excludeLegend)
+                    .filter(
+                        ({ name }, index, self) =>
+                            self.findIndex((obj) => obj.name === name) === index
+                    )
                     .map(({ name, color }) => (
                         <div
                             key={`object_legend_${name}`}

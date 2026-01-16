@@ -16,7 +16,7 @@ export type DeploymentMap = {
             | 'vert-line'
             | 'diag-line'
             | 'diag-line-flipped';
-        excludeKey?: boolean;
+        excludeLegend?: boolean;
         hideName?: boolean;
     }>;
     objects: Array<{
@@ -24,7 +24,7 @@ export type DeploymentMap = {
         position: MapPosition;
         size: number;
         color: string;
-        excludeKey?: boolean;
+        excludeLegend?: boolean;
     }>;
     gameSizes: GameSize;
     rulers?: Array<{
