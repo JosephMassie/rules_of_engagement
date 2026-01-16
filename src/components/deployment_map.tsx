@@ -96,7 +96,6 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                             (
                                 {
                                     name,
-                                    shortName,
                                     position,
                                     color,
                                     size,
@@ -140,7 +139,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                                                 )}
                                                 {!hideName && (
                                                     <div className="absolute w-full top-1/2 left-1/2 -translate-1/2">
-                                                        {shortName ?? name}
+                                                        {name}
                                                     </div>
                                                 )}
                                             </div>
@@ -165,7 +164,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                                                 }}>
                                                 {!hideName && (
                                                     <div className="absolute w-full top-1/2 left-1/2 -translate-1/2">
-                                                        {shortName ?? name}
+                                                        {name}
                                                     </div>
                                                 )}
                                             </div>
@@ -208,7 +207,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                                                                     24,
                                                             }
                                                         )}>
-                                                        {shortName ?? name}
+                                                        {name}
                                                     </div>
                                                 )}
                                             </div>
@@ -420,7 +419,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
             <div className="mt-8 flex flex-wrap gap-4 items-center justify-center text-sm sm:text-base">
                 {map.zones
                     .filter(({ excludeKey }) => !excludeKey)
-                    .map(({ name, shortName, color }) => {
+                    .map(({ name, color }) => {
                         return (
                             <div
                                 key={`zone_legend_${name}`}
@@ -431,7 +430,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({ map, ...props }) => {
                                         'mr-2 inline-block w-[1em] h-[1em]',
                                         color
                                     )}></span>
-                                {shortName ?? name}
+                                {name}
                             </div>
                         );
                     })}

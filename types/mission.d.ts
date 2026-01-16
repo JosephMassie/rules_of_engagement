@@ -5,7 +5,6 @@ export type MapPosition = [number, number];
 export type DeploymentMap = {
     zones: Array<{
         name: string;
-        shortName?: boolean;
         color: string;
         position: MapPosition;
         size: number;
