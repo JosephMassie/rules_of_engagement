@@ -1093,6 +1093,153 @@
                 ],
                 "special_notes": [
                     "It is not allowed to deploy inside of an Area of Interest, or in Silhouette contact with the Communication Antenna."
+                ],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "circle",
+                                "size": 24,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "circle",
+                                "size": 24,
+                                "position": [48, 48],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "diag-line",
+                                "size": 1,
+                                "position": [24, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Communication Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [24, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 24,
+                                "start": [24, 48],
+                                "placement": "bottom",
+                                "position": [48, 5]
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "circle",
+                                "size": 20,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "circle",
+                                "size": 20,
+                                "position": [32, 48],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "diag-line",
+                                "size": 1,
+                                "position": [16, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Communication Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [16, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 20,
+                                "start": [12, 48],
+                                "placement": "bottom",
+                                "position": [48, 5]
+                            },
+                            {
+                                "length": 24,
+                                "start": [32, 0],
+                                "placement": "right"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "circle",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "circle",
+                                "size": 12,
+                                "position": [24, 32],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "diag-line",
+                                "size": 1,
+                                "position": [12, 16],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Communication Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [12, 16]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [12, 32],
+                                "placement": "bottom",
+                                "position": [48, 5]
+                            },
+                            {
+                                "length": 16,
+                                "start": [24, 0],
+                                "placement": "right"
+                            }
+                        ]
+                    }
                 ]
             },
             "scenario_special_rules": {
@@ -1220,7 +1367,120 @@
                         "deployment_zone": "12 in x 48 in"
                     }
                 ],
-                "special_notes": []
+                "special_notes": [],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 1,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 1,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 1,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [],
+                        "rulers": [
+                            {
+                                "length": 8,
+                                "start": [0, 24],
+                                "placement": "left"
+                            }
+                        ]
+                    }
+                ]
             },
             "scenario_special_rules": {
                 "killing": "Troopers are considered Killed by the adversary when they enter Dead State, or they are in a Null State at the end of the game. Troopers that have not been deployed on the game table, as a Model or Marker, at the end of the game will be considered to be Killed by the adversary.",
@@ -1282,7 +1542,189 @@
                         "deployment_zone": "12 in x 48 in"
                     }
                 ],
-                "special_notes": []
+                "special_notes": [],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 1,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "sector",
+                                "color": "bg-lime-600",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 12],
+                                "excludeLegend": true,
+                                "hideName": true
+                            },
+                            {
+                                "name": "sector",
+                                "color": "bg-cyan-600",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 28],
+                                "excludeLegend": true,
+                                "hideName": true
+                            }
+                        ],
+                        "objects": [],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 8,
+                                "start": [0, 20],
+                                "placement": "left"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 1,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "sector",
+                                "color": "bg-lime-600",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 12],
+                                "excludeLegend": true,
+                                "hideName": true
+                            },
+                            {
+                                "name": "sector",
+                                "color": "bg-cyan-600",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 28],
+                                "excludeLegend": true,
+                                "hideName": true
+                            }
+                        ],
+                        "objects": [],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 8,
+                                "start": [0, 20],
+                                "placement": "left"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 1,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "sector",
+                                "color": "bg-lime-600",
+                                "shape": "full-width",
+                                "size": 4,
+                                "position": [0, 10],
+                                "excludeLegend": true,
+                                "hideName": true
+                            },
+                            {
+                                "name": "sector",
+                                "color": "bg-cyan-600",
+                                "shape": "full-width",
+                                "size": 4,
+                                "position": [0, 18],
+                                "excludeLegend": true,
+                                "hideName": true
+                            }
+                        ],
+                        "objects": [],
+                        "rulers": [
+                            {
+                                "length": 8,
+                                "start": [0, 24],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 4,
+                                "start": [0, 14],
+                                "placement": "left"
+                            }
+                        ]
+                    }
+                ]
             },
             "scenario_special_rules": {
                 "sectors_(zo)": "When the game is finished, but not before, 3 Sectors are marked out. In 200/250/300/350/400 point games, these Sectors are 8 inches deep and as wide as the game table. Two of these Sectors are placed 4 inches from the central line of the game table, one on each side, and the third Sector is a strip 8 inches deep in the central area of the table. In 150 point games, these Sectors are 4 inches deep and as wide as the game table. Two of these Sectors are placed 2 inches from the central line of the game table, one on each side, and the third Sector is a strip 4 inches deep in the central area of the table. In this scenario each Sector is a Zone of Operations (ZO).",
@@ -1349,7 +1791,120 @@
                         "deployment_zone": "16 in x 48 in"
                     }
                 ],
-                "special_notes": []
+                "special_notes": [],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 32],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 1,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [],
+                        "rulers": [
+                            {
+                                "length": 16,
+                                "start": [0, 32],
+                                "placement": "left"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 32],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 1,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [],
+                        "rulers": [
+                            {
+                                "length": 16,
+                                "start": [0, 32],
+                                "placement": "left"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 20],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 1,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 20],
+                                "placement": "left"
+                            }
+                        ]
+                    }
+                ]
             },
             "scenario_special_rules": {
                 "reinforced_tactical_link": "In this scenario the Loss of Lieutenant rule does not apply. In this mission, the identity of the Lieutenant is always Open Information. The player must indicate which Marker is the Lieutenant if it is in a Marker State (Camouflaged, Decoy...) or which Markers are the Lieutenant in the case of a Holoprojector. The Lieutenant must be placed on the game table at the beginning of the first Game Round, either as a Model or as a Marker. Players may not deploy their Lieutenants in Hidden Deployment State. If the player lacks a Lieutenant during the Tactical Phase of their Active Turn because this Trooper was not deployed or because it is in the Isolated State or any Null State (Unconscious, Dead, Sepsitorized…), then the player must name a new Lieutenant, without Order expenditure. The identity of this new Lieutenant is also Open Information. It is compulsory that this Lieutenant be a Model or a Marker placed on the game table.",
