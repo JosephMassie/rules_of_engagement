@@ -30,18 +30,19 @@ import clsx from 'clsx';
 import { Input } from '@/components/ui/input';
 import { isInsideMapRuler } from '@/lib/utils';
 
+const zoneColors = ['exclusion-zone', 'obj-room'];
 const availableColors = [
+    'bg-black',
     'bg-red-600',
     'bg-orange-600',
-    'bg-amber-600',
-    'bg-yellow-600',
+    'bg-amber-600 text-white',
+    'bg-yellow-500',
     'bg-lime-600',
-    'bg-green-600',
+    'bg-green-800 text-white',
     'bg-cyan-600',
     'bg-blue-600',
     'bg-violet-600',
     'bg-fuchsia-600',
-    'exclusion-zone',
 ];
 
 export default function MapBuilder() {
@@ -100,6 +101,7 @@ export default function MapBuilder() {
                                             shape: 'full-width',
                                             size: 1,
                                             position: [0, 0],
+                                            excludeLegend: true,
                                         },
                                     ],
                                 };
@@ -305,7 +307,10 @@ export default function MapBuilder() {
                                             <SelectValue placeholder="Pick a Color" />
                                         </SelectTrigger>
                                         <SelectContent>
-                                            {availableColors.map((color) => (
+                                            {[
+                                                ...zoneColors,
+                                                ...availableColors,
+                                            ].map((color) => (
                                                 <SelectItem
                                                     key={color}
                                                     value={color}
@@ -732,7 +737,7 @@ export default function MapBuilder() {
                                                                     return r;
                                                                 return {
                                                                     ...r,
-                                                                    position: [
+                                                                    start: [
                                                                         r
                                                                             .start[0],
                                                                         event
