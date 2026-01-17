@@ -12,6 +12,7 @@ import {
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import clsx from 'clsx';
+import posthog from 'posthog-js';
 
 export function DisplayModeToggle() {
     const { setTheme, theme } = useTheme();
@@ -30,7 +31,13 @@ export function DisplayModeToggle() {
                     className={clsx({
                         'underline font-bold': theme === 'light',
                     })}
-                    onClick={() => setTheme('light')}
+                    onClick={() => {
+                        setTheme('light');
+                        posthog.capture('theme_changed', {
+                            new_theme: 'light',
+                            previous_theme: theme,
+                        });
+                    }}
                 >
                     Light
                 </DropdownMenuItem>
@@ -38,7 +45,13 @@ export function DisplayModeToggle() {
                     className={clsx({
                         'underline font-bold': theme === 'dark',
                     })}
-                    onClick={() => setTheme('dark')}
+                    onClick={() => {
+                        setTheme('dark');
+                        posthog.capture('theme_changed', {
+                            new_theme: 'dark',
+                            previous_theme: theme,
+                        });
+                    }}
                 >
                     Dark
                 </DropdownMenuItem>
@@ -46,7 +59,13 @@ export function DisplayModeToggle() {
                     className={clsx({
                         'underline font-bold': theme === 'system',
                     })}
-                    onClick={() => setTheme('system')}
+                    onClick={() => {
+                        setTheme('system');
+                        posthog.capture('theme_changed', {
+                            new_theme: 'system',
+                            previous_theme: theme,
+                        });
+                    }}
                 >
                     System
                 </DropdownMenuItem>

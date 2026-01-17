@@ -5,6 +5,7 @@ import { useSeasons } from '@/stores/useSeasons';
 import { HTMLProps } from 'react';
 import { MissionData } from '../../types/mission';
 import Link from 'next/link';
+import posthog from 'posthog-js';
 
 function MissionList({
     seasonKey,
@@ -29,7 +30,15 @@ function MissionList({
                             key={toKey(mission.name)}
                             href={`/seasons/${seasonKey}/missions/${toKey(
                                 mission.name
-                            )}`}>
+                            )}`}
+                            onClick={() =>
+                                posthog.capture('mission_selected', {
+                                    mission_name: mission.name,
+                                    mission_type: mission.type,
+                                    mission_key: toKey(mission.name),
+                                    season_key: seasonKey,
+                                })
+                            }>
                             {mission.name}
                         </Link>
                     );

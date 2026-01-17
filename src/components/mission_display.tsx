@@ -18,6 +18,7 @@ import {
     SelectContent,
 } from './ui/select';
 import DeploymentMapDisplay from './deployment_map';
+import posthog from 'posthog-js';
 
 type Props = HTMLProps<HTMLDivElement> & {
     seasonKey: string;
@@ -137,9 +138,22 @@ export default function MissionDisplay({
                             <div className="mb-4 w-full grid justify-center items-center gap-4">
                                 <Select
                                     value={gameSize.toFixed()}
-                                    onValueChange={(value) =>
-                                        setGameSize(parseInt(value))
-                                    }>
+                                    onValueChange={(value) => {
+                                        const newGameSize = parseInt(value);
+                                        setGameSize(newGameSize);
+                                        const selectedMap =
+                                            mission.forces_and_deployment.maps?.[
+                                                newGameSize
+                                            ];
+                                        posthog.capture('game_size_changed', {
+                                            mission_name: mission.name,
+                                            mission_key: missionKey,
+                                            season_key: seasonKey,
+                                            game_size_index: newGameSize,
+                                            game_sizes_label:
+                                                selectedMap?.gameSizes,
+                                        });
+                                    }}>
                                     <SelectTrigger className="m-auto">
                                         <SelectValue placeholder="Select a Game Size" />
                                     </SelectTrigger>
