@@ -478,6 +478,10 @@ const DeploymentMapDisplay: React.FC<Props> = ({
             <div className="mt-8 flex flex-wrap gap-4 items-center justify-center text-sm sm:text-base">
                 {map.zones
                     .filter(({ excludeLegend }) => !excludeLegend)
+                    .filter(
+                        ({ name }, index, self) =>
+                            self.findIndex((obj) => obj.name === name) === index
+                    )
                     .map(({ name, color }) => {
                         return (
                             <div

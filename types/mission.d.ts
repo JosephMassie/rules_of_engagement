@@ -2,9 +2,12 @@ export type GameSize = '150P' | '200P / 250P' | '300P / 350P / 400P';
 
 export type MapPosition = [number, number];
 
+type MapOutsideRulerPlacement = 'left' | 'right' | 'top' | 'bottom';
+export type MapRulerPlacement = MapOutsideRulerPlacement | 'inside';
+
 export type MapOutsideRuler = {
     length: number;
-    placement: 'left' | 'right' | 'top' | 'bottom';
+    placement: MapOutsideRulerPlacement;
     start: MapPosition;
 };
 
@@ -15,20 +18,22 @@ export type MapInsideRuler = {
     end: MapPosition;
 };
 
+export type MapShape =
+    | 'full-width'
+    | 'circle'
+    | 'box'
+    | 'horiz-line'
+    | 'vert-line'
+    | 'diag-line'
+    | 'diag-line-flipped';
+
 export type DeploymentMap = {
     zones: Array<{
         name: string;
         color: string;
         position: MapPosition;
         size: number;
-        shape:
-            | 'full-width'
-            | 'circle'
-            | 'box'
-            | 'horiz-line'
-            | 'vert-line'
-            | 'diag-line'
-            | 'diag-line-flipped';
+        shape: MapShape;
         excludeLegend?: boolean;
         hideName?: boolean;
     }>;
