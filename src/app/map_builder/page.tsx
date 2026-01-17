@@ -3,30 +3,31 @@
 import { useState } from 'react';
 import type { DeploymentMap } from '../../../types/mission';
 import DeploymentMapDisplay from '@/components/deployment_map';
+import { Vector2D } from '@/lib/vector';
 
 export default function MapBuilder() {
     const [map, setMap] = useState<DeploymentMap | null>({
-        gameSizes: '300P / 350P / 400P',
+        gameSizes: '150P',
         zones: [
             {
                 name: 'Deployment Zone A',
-                position: [48, 0],
-                size: 24,
+                position: [24, 0],
+                size: 12,
                 color: 'bg-amber-500',
                 shape: 'circle',
                 excludeLegend: true,
             },
             {
                 name: 'Deployment Zone B',
-                position: [0, 48],
-                size: 24,
+                position: [0, 32],
+                size: 12,
                 color: 'bg-green-900 text-white',
                 shape: 'circle',
                 excludeLegend: true,
             },
             {
                 name: 'center-line',
-                position: [24, 24],
+                position: [12, 16],
                 size: 1,
                 color: 'bg-black',
                 shape: 'diag-line-flipped',
@@ -36,19 +37,19 @@ export default function MapBuilder() {
         objects: [
             {
                 name: 'Tech-Coffin',
-                position: [12.68, 12.68],
+                position: [7.26, 9.54],
                 size: 4,
                 color: 'bg-purple-800',
             },
             {
                 name: 'Tech-Coffin',
-                position: [24, 24],
+                position: [12, 16],
                 size: 4,
                 color: 'bg-purple-800',
             },
             {
                 name: 'Tech-Coffin',
-                position: [35.31, 35.31],
+                position: [16.8, 22.4],
                 size: 4,
                 color: 'bg-purple-800',
             },
@@ -56,14 +57,19 @@ export default function MapBuilder() {
         rulers: [
             {
                 placement: 'bottom',
-                start: [24, 48],
-                end: [0, 48],
+                start: [0, 32],
+                length: 12,
             },
             {
+                placement: 'left',
+                start: [0, 0],
                 length: 16,
+            },
+            {
+                length: 8,
                 placement: 'inside',
-                start: [24, 24],
-                end: [25, 25],
+                start: [12, 16],
+                end: [24, 32],
             },
         ],
     });

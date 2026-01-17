@@ -1,7 +1,14 @@
 import { HTMLProps } from 'react';
-import type { DeploymentMap, GameSize, MapPosition } from '../../types/mission';
+import type {
+    DeploymentMap,
+    GameSize,
+    MapInsideRuler,
+    MapOutsideRuler,
+    MapPosition,
+} from '../../types/mission';
 import clsx from 'clsx';
 import { Vector2D } from '@/lib/vector';
+import { isInsideMapRuler } from '@/lib/utils';
 
 type Props = HTMLProps<HTMLDivElement> & {
     map: DeploymentMap | null;
@@ -35,6 +42,131 @@ const MapBase = ({
             style={{ aspectRatio: `${width}/${height}` }}
             {...props}>
             {children}
+        </div>
+    );
+};
+
+const MapRuler = ({
+    ruler,
+    mapDimensions,
+    ...props
+}: HTMLProps<HTMLDivElement> & {
+    ruler: MapOutsideRuler | MapInsideRuler;
+    mapDimensions: MapPosition;
+}) => {
+    const offSet = 1;
+    const [mapWidth, mapHeight] = mapDimensions;
+    const longestSide = mapWidth >= mapHeight ? mapWidth : mapHeight;
+
+    if (isInsideMapRuler(ruler)) {
+        const { start, end, length } = ruler;
+
+        const startVec = new Vector2D(...start);
+        const endVec = new Vector2D(...end);
+
+        const cssPos = positionToCss(startVec.toArray(), mapDimensions);
+
+        /* After calculating the CSS position invert start and end y positions
+         * since the relative coordinate system use in the map has +y going down
+         */
+        endVec.y *= -1;
+        startVec.y *= -1;
+
+        let deltaVect = startVec.subtract(endVec);
+
+        // If length is provided set the delta vect's magnitude to it
+        if (length) {
+            deltaVect = deltaVect.normalize().multiplyScalar(length);
+        }
+
+        const rulerLength = deltaVect.magnitude();
+        const rulerAngle = Math.atan2(...deltaVect.toArray()) * (180 / Math.PI);
+
+        return (
+            <div
+                data-type="ruler"
+                className="absolute origin-top-left w-0.5 bg-black text-black"
+                style={{
+                    height: `${(rulerLength / longestSide) * 100}%`,
+                    ...cssPos,
+                    transform: `rotate(${rulerAngle}deg) translate(${
+                        offSet * 10
+                    }px)`,
+                }}
+                {...props}>
+                <div
+                    className="absolute top-1/2 left-1.5 -translate-y-1/2 max-w-6 text-xs xs:text-base"
+                    style={{
+                        transform: `rotate(${rulerAngle * -1}deg)`,
+                    }}>{`${rulerLength.toFixed()}"`}</div>
+            </div>
+        );
+    }
+
+    /* Apply offset to start and end positions if placement is outside
+     * also determine max length for percentage based calculations
+     */
+    const { placement, start, length } = ruler;
+    const isVertical = ['left', 'right'].includes(placement);
+    let [x, y] = start;
+    let maxLength = longestSide;
+
+    // Style control classes
+    let textPlacement = 'right-2';
+
+    switch (placement) {
+        case 'left':
+            x -= offSet;
+            maxLength = mapHeight;
+            break;
+        case 'right':
+            x += offSet;
+            maxLength = mapHeight;
+            textPlacement = 'left-1';
+            break;
+        case 'top':
+            y -= offSet;
+            maxLength = mapWidth;
+            textPlacement = 'bottom-0'
+            break;
+        case 'bottom':
+            y += offSet;
+            maxLength = mapWidth;
+            textPlacement = 'top-0';
+            break;
+        default:
+            console.error('unknown map ruler placement', placement);
+    }
+
+    const cssPos = positionToCss([x, y], mapDimensions);
+    const cssLength: { width?: string; height?: string } = {};
+    if (isVertical) {
+        cssLength.height = `${(length / maxLength) * 100}%`;
+    } else {
+        cssLength.width = `${(length / maxLength) * 100}%`;
+    }
+
+    return (
+        <div
+            data-type="ruler"
+            className={clsx('absolute origin-top-left bg-foreground', {
+                'w-0.5': isVertical,
+                'h-0.5': !isVertical,
+            })}
+            style={{
+                ...cssLength,
+                ...cssPos,
+            }}
+            {...props}>
+            <div
+                className={clsx(
+                    'absolute max-w-6 text-xs xs:text-base',
+                    textPlacement,
+                    {
+                        'top-1/2 -translate-y-1/2': isVertical,
+                        'left-1/2 -translate-x-1/2': !isVertical,
+                    }
+                )}>{`${length.toFixed()}"`}</div>
         </div>
     );
 };
@@ -341,100 +473,13 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                         )}
                     </div>
                 </MapBase>
-                {map.rulers?.map(({ length, start, end, placement }, i) => {
-                    const startVec = new Vector2D(...start);
-                    const endVec = new Vector2D(...end);
-                    let maxLength = longestSide;
-
-                    /* Apply offset to start and end positions if placement is outside
-                     * also determine max length for percentage based calculations
-                     */
-                    const offSet = 1;
-                    switch (placement) {
-                        case 'left':
-                            startVec.x -= offSet;
-                            endVec.x -= offSet;
-                            maxLength = mapHeight;
-                            break;
-                        case 'right':
-                            startVec.x += offSet;
-                            endVec.x += offSet;
-                            maxLength = mapHeight;
-                            break;
-                        case 'top':
-                            startVec.y -= offSet;
-                            endVec.y -= offSet;
-                            maxLength = mapWidth;
-                            break;
-                        case 'bottom':
-                            startVec.y += offSet;
-                            endVec.y += offSet;
-                            maxLength = mapWidth;
-                            break;
-                        case 'inside':
-                            // Do nothing as the position is within the map
-                            break;
-                        default:
-                            console.error(
-                                'unknown map ruler placement',
-                                placement
-                            );
-                    }
-
-                    const cssPos = positionToCss(
-                        startVec.toArray(),
-                        dimensions
-                    );
-
-                    /* After calculating the CSS position invert start and end y positions
-                     * since the relative coordinate system use in the map has +y going down
-                     */
-                    endVec.y *= -1;
-                    startVec.y *= -1;
-
-                    let deltaVect = startVec.subtract(endVec);
-
-                    if (length) {
-                        deltaVect = deltaVect
-                            .normalize()
-                            .multiplyScalar(length);
-                    }
-
-                    const rulerLength = deltaVect.magnitude();
-                    const rulerAngle =
-                        Math.atan2(...deltaVect.toArray()) * (180 / Math.PI);
-
-                    return (
-                        <div
-                            key={`${length}-${i}`}
-                            data-type="ruler"
-                            className={clsx('absolute origin-top-left w-0.5', {
-                                'bg-black text-black': placement === 'inside',
-                                'bg-foreground': placement !== 'inside',
-                            })}
-                            style={{
-                                height: `${(rulerLength / maxLength) * 100}%`,
-                                ...cssPos,
-                                transform: `rotate(${rulerAngle}deg) translate(${
-                                    offSet * (placement === 'inside' ? 10 : 0)
-                                }px)`,
-                            }}>
-                            <div
-                                className={clsx(
-                                    'absolute top-1/2 -translate-y-1/2 max-w-6 text-xs xs:text-base',
-                                    {
-                                        'right-2': placement === 'left',
-                                        'left-2': placement === 'right',
-                                        'left-1': placement === 'bottom',
-                                        'left-1.5': placement === 'inside',
-                                    }
-                                )}
-                                style={{
-                                    transform: `rotate(${rulerAngle * -1}deg)`,
-                                }}>{`${rulerLength.toFixed()}"`}</div>
-                        </div>
-                    );
-                })}
+                {map.rulers?.map((ruler, i) => (
+                    <MapRuler
+                        key={`${ruler.length}-${i}`}
+                        ruler={ruler}
+                        mapDimensions={dimensions}
+                    />
+                ))}
             </div>
             <div className="mt-8 flex flex-wrap gap-4 items-center justify-center text-sm sm:text-base">
                 {map.zones

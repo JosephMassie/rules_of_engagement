@@ -2,6 +2,19 @@ export type GameSize = '150P' | '200P / 250P' | '300P / 350P / 400P';
 
 export type MapPosition = [number, number];
 
+export type MapOutsideRuler = {
+    length: number;
+    placement: 'left' | 'right' | 'top' | 'bottom';
+    start: MapPosition;
+};
+
+export type MapInsideRuler = {
+    length?: number;
+    placement: 'inside';
+    start: MapPosition;
+    end: MapPosition;
+};
+
 export type DeploymentMap = {
     zones: Array<{
         name: string;
@@ -27,12 +40,7 @@ export type DeploymentMap = {
         excludeLegend?: boolean;
     }>;
     gameSizes: GameSize;
-    rulers?: Array<{
-        length?: number;
-        placement: 'left' | 'right' | 'top' | 'bottom' | 'inside';
-        start: MapPosition;
-        end: MapPosition;
-    }>;
+    rulers?: Array<MapOutsideRuler | MapInsideRuler>;
 };
 
 export type DeploymentTableEntry = {
