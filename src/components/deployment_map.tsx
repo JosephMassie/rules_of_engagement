@@ -127,7 +127,7 @@ const MapRuler = ({
         case 'top':
             y -= offSet;
             maxLength = mapWidth;
-            textPlacement = 'bottom-0'
+            textPlacement = 'bottom-0';
             break;
         case 'bottom':
             y += offSet;
@@ -451,25 +451,19 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                     </div>
                     <div className="z-10">
                         {map.objects.map(
-                            ({ name, position, size, color }, i) => {
-                                console.log(`position`, position);
-                                return (
-                                    <div
-                                        key={`${name}-${i}`}
-                                        data-type="object"
-                                        className={clsx(
-                                            'absolute rounded-full -translate-1/2',
-                                            `size-${size}`,
-                                            color
-                                        )}
-                                        style={{
-                                            ...positionToCss(
-                                                position,
-                                                dimensions
-                                            ),
-                                        }}></div>
-                                );
-                            }
+                            ({ name, position, size, color }, i) => (
+                                <div
+                                    key={`${name}-${i}`}
+                                    data-type="object"
+                                    className={clsx(
+                                        'absolute rounded-full -translate-1/2',
+                                        `size-${size}`,
+                                        color
+                                    )}
+                                    style={{
+                                        ...positionToCss(position, dimensions),
+                                    }}></div>
+                            )
                         )}
                     </div>
                 </MapBase>
