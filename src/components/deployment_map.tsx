@@ -341,16 +341,20 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                                             {
                                                                 'left-[53%]':
                                                                     position[0] <=
-                                                                    24,
+                                                                    mapWidth /
+                                                                        2,
                                                                 'right-[53%]':
                                                                     position[0] >
-                                                                    24,
+                                                                    mapWidth /
+                                                                        2,
                                                                 'top-[53%]':
                                                                     position[1] <=
-                                                                    24,
+                                                                    mapHeight /
+                                                                        2,
                                                                 'bottom-[53%]':
                                                                     position[1] >
-                                                                    24,
+                                                                    mapHeight /
+                                                                        2,
                                                             }
                                                         )}>
                                                         {name}
