@@ -96,10 +96,10 @@ export default function MapBuilder() {
                                     zones: [
                                         ...zones,
                                         {
-                                            name: 'zone',
+                                            name: 'Deployment Zone',
                                             color: '',
                                             shape: 'full-width',
-                                            size: 1,
+                                            size: 12,
                                             position: [0, 0],
                                             excludeLegend: true,
                                         },
@@ -124,7 +124,7 @@ export default function MapBuilder() {
                                             event.preventDefault();
 
                                             const data = new FormData(
-                                                event.target as HTMLFormElement
+                                                event.target as HTMLFormElement,
                                             );
 
                                             setMap((prev) => {
@@ -134,10 +134,10 @@ export default function MapBuilder() {
                                                         return {
                                                             ...z,
                                                             name: data.get(
-                                                                'field_val'
+                                                                'field_val',
                                                             ) as string,
                                                         };
-                                                    }
+                                                    },
                                                 );
 
                                                 return { ...prev, zones };
@@ -157,7 +157,7 @@ export default function MapBuilder() {
                                                             ...z,
                                                             shape,
                                                         };
-                                                    }
+                                                    },
                                                 );
 
                                                 return { ...prev, zones };
@@ -210,7 +210,7 @@ export default function MapBuilder() {
                                                                             .position[1],
                                                                     ] as MapPosition,
                                                                 };
-                                                            }
+                                                            },
                                                         );
 
                                                     return { ...prev, zones };
@@ -244,7 +244,7 @@ export default function MapBuilder() {
                                                                             0,
                                                                     ] as MapPosition,
                                                                 };
-                                                            }
+                                                            },
                                                         );
 
                                                     return { ...prev, zones };
@@ -277,7 +277,7 @@ export default function MapBuilder() {
                                                                             .valueAsNumber ||
                                                                         0,
                                                                 };
-                                                            }
+                                                            },
                                                         );
 
                                                     return { ...prev, zones };
@@ -297,7 +297,7 @@ export default function MapBuilder() {
                                                             ...z,
                                                             color,
                                                         };
-                                                    }
+                                                    },
                                                 );
 
                                                 return { ...prev, zones };
@@ -318,7 +318,10 @@ export default function MapBuilder() {
                                                     <div
                                                         className={clsx(
                                                             'inline-block size-6',
-                                                            { [color]: !!color }
+                                                            {
+                                                                [color]:
+                                                                    !!color,
+                                                            },
                                                         )}></div>
                                                 </SelectItem>
                                             ))}
@@ -330,7 +333,7 @@ export default function MapBuilder() {
                                         onClick={() => {
                                             setMap((prev) => {
                                                 const zones = prev.zones.filter(
-                                                    (_, j) => j !== i
+                                                    (_, j) => j !== i,
                                                 );
 
                                                 return { ...prev, zones };
@@ -379,7 +382,7 @@ export default function MapBuilder() {
                                             event.preventDefault();
 
                                             const data = new FormData(
-                                                event.target as HTMLFormElement
+                                                event.target as HTMLFormElement,
                                             );
 
                                             setMap((prev) => {
@@ -389,7 +392,7 @@ export default function MapBuilder() {
                                                         return {
                                                             ...o,
                                                             name: data.get(
-                                                                'field_val'
+                                                                'field_val',
                                                             ) as string,
                                                         };
                                                     });
@@ -424,7 +427,7 @@ export default function MapBuilder() {
                                                                             .position[1],
                                                                     ] as MapPosition,
                                                                 };
-                                                            }
+                                                            },
                                                         );
 
                                                     return { ...prev, objects };
@@ -458,7 +461,7 @@ export default function MapBuilder() {
                                                                             0,
                                                                     ] as MapPosition,
                                                                 };
-                                                            }
+                                                            },
                                                         );
 
                                                     return { ...prev, objects };
@@ -491,7 +494,7 @@ export default function MapBuilder() {
                                                                             .valueAsNumber ||
                                                                         0,
                                                                 };
-                                                            }
+                                                            },
                                                         );
 
                                                     return { ...prev, objects };
@@ -528,7 +531,10 @@ export default function MapBuilder() {
                                                     <div
                                                         className={clsx(
                                                             'inline-block size-6',
-                                                            { [color]: !!color }
+                                                            {
+                                                                [color]:
+                                                                    !!color,
+                                                            },
                                                         )}></div>
                                                 </SelectItem>
                                             ))}
@@ -541,7 +547,7 @@ export default function MapBuilder() {
                                             setMap((prev) => {
                                                 const objects =
                                                     prev.objects.filter(
-                                                        (_, j) => j !== i
+                                                        (_, j) => j !== i,
                                                     );
 
                                                 return { ...prev, objects };
@@ -586,7 +592,7 @@ export default function MapBuilder() {
                                     <Select
                                         value={ruler.placement}
                                         onValueChange={(
-                                            place: MapRulerPlacement
+                                            place: MapRulerPlacement,
                                         ) =>
                                             setMap((prev) => {
                                                 const rulers = prev.rulers?.map(
@@ -601,7 +607,7 @@ export default function MapBuilder() {
                                                                 placement:
                                                                     place,
                                                                 end: !isInsideMapRuler(
-                                                                    r
+                                                                    r,
                                                                 )
                                                                     ? ([
                                                                           1, 1,
@@ -631,7 +637,7 @@ export default function MapBuilder() {
                                                             ...r,
                                                             placement: place,
                                                         };
-                                                    }
+                                                    },
                                                 );
 
                                                 return { ...prev, rulers };
@@ -663,7 +669,7 @@ export default function MapBuilder() {
                                             event.preventDefault();
 
                                             const data = new FormData(
-                                                event.target as HTMLFormElement
+                                                event.target as HTMLFormElement,
                                             );
 
                                             setMap((prev) => {
@@ -674,12 +680,12 @@ export default function MapBuilder() {
                                                             ...r,
                                                             length: parseInt(
                                                                 (data.get(
-                                                                    'field_val'
+                                                                    'field_val',
                                                                 ) as string) ??
-                                                                    0
+                                                                    0,
                                                             ) as number,
                                                         };
-                                                    }
+                                                    },
                                                 );
 
                                                 return { ...prev, rulers };
@@ -712,7 +718,7 @@ export default function MapBuilder() {
                                                                             .start[1],
                                                                     ] as MapPosition,
                                                                 };
-                                                            }
+                                                            },
                                                         );
 
                                                     return { ...prev, rulers };
@@ -746,7 +752,7 @@ export default function MapBuilder() {
                                                                             0,
                                                                     ] as MapPosition,
                                                                 };
-                                                            }
+                                                            },
                                                         );
 
                                                     return { ...prev, rulers };
@@ -774,7 +780,7 @@ export default function MapBuilder() {
                                                                     prev.rulers?.map(
                                                                         (
                                                                             r,
-                                                                            j
+                                                                            j,
                                                                         ) => {
                                                                             if (
                                                                                 j !==
@@ -794,7 +800,7 @@ export default function MapBuilder() {
                                                                                         .end[1],
                                                                                 ] as MapPosition,
                                                                             };
-                                                                        }
+                                                                        },
                                                                     );
 
                                                                 return {
@@ -822,7 +828,7 @@ export default function MapBuilder() {
                                                                     prev.rulers?.map(
                                                                         (
                                                                             r,
-                                                                            j
+                                                                            j,
                                                                         ) => {
                                                                             if (
                                                                                 j !==
@@ -843,7 +849,7 @@ export default function MapBuilder() {
                                                                                             0,
                                                                                     ] as MapPosition,
                                                                             };
-                                                                        }
+                                                                        },
                                                                     );
 
                                                                 return {
@@ -863,7 +869,7 @@ export default function MapBuilder() {
                                             setMap((prev) => {
                                                 const rulers =
                                                     prev.rulers?.filter(
-                                                        (_, j) => j !== i
+                                                        (_, j) => j !== i,
                                                     );
 
                                                 return { ...prev, rulers };
@@ -888,7 +894,7 @@ export default function MapBuilder() {
                             className="mb-2"
                             onClick={() =>
                                 navigator.clipboard.writeText(
-                                    JSON.stringify(map)
+                                    JSON.stringify(map),
                                 )
                             }>
                             Copy

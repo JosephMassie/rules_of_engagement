@@ -37,7 +37,7 @@ const MapBase = ({
                 className,
                 {
                     'xs:max-w-120': ratio === 1,
-                }
+                },
             )}
             style={{ aspectRatio: `${width}/${height}` }}
             {...props}>
@@ -165,7 +165,7 @@ const MapRuler = ({
                     {
                         'top-1/2 -translate-y-1/2': isVertical,
                         'left-1/2 -translate-x-1/2': !isVertical,
-                    }
+                    },
                 )}>{`${length.toFixed()}"`}</div>
         </div>
     );
@@ -235,7 +235,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                 </p>
             </div>
 
-            <div className="relative">
+            <div className="mx-auto relative w-fit">
                 <MapBase dimensions={dimensions} {...props}>
                     <div>
                         {map.zones.map(
@@ -248,7 +248,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                     shape,
                                     hideName,
                                 },
-                                i
+                                i,
                             ) => {
                                 const key = `${name}-${i}`;
 
@@ -263,16 +263,16 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                                 data-type="zone"
                                                 className={clsx(
                                                     'absolute -translate-1/2',
-                                                    color
+                                                    color,
                                                 )}
                                                 style={{
                                                     ...positionToCss(
                                                         position,
-                                                        dimensions
+                                                        dimensions,
                                                     ),
                                                     ...sizeToCss(
                                                         [size, size],
-                                                        dimensions
+                                                        dimensions,
                                                     ),
                                                 }}>
                                                 {color.includes('obj-room') && (
@@ -297,7 +297,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                                 data-type="zone"
                                                 className={clsx(
                                                     'absolute w-full',
-                                                    color
+                                                    color,
                                                 )}
                                                 style={{
                                                     height: `${
@@ -305,7 +305,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                                     }%`,
                                                     ...positionToCss(
                                                         position,
-                                                        dimensions
+                                                        dimensions,
                                                     ),
                                                 }}>
                                                 {!hideName && (
@@ -322,16 +322,16 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                                 data-type="zone"
                                                 className={clsx(
                                                     'absolute rounded-full -translate-1/2',
-                                                    color
+                                                    color,
                                                 )}
                                                 style={{
                                                     ...positionToCss(
                                                         position,
-                                                        dimensions
+                                                        dimensions,
                                                     ),
                                                     ...sizeToCss(
                                                         [size * 2, size * 2],
-                                                        dimensions
+                                                        dimensions,
                                                     ),
                                                 }}>
                                                 {!hideName && (
@@ -355,7 +355,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                                                     position[1] >
                                                                     mapHeight /
                                                                         2,
-                                                            }
+                                                            },
                                                         )}>
                                                         {name}
                                                     </div>
@@ -369,12 +369,12 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                                 data-type="zone"
                                                 className={clsx(
                                                     'absolute w-full h-px',
-                                                    color
+                                                    color,
                                                 )}
                                                 style={{
                                                     ...positionToCss(
                                                         position,
-                                                        dimensions
+                                                        dimensions,
                                                     ),
                                                 }}></div>
                                         );
@@ -385,12 +385,12 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                                 datatype="zone"
                                                 className={clsx(
                                                     'absolute h-full w-px',
-                                                    color
+                                                    color,
                                                 )}
                                                 style={{
                                                     ...positionToCss(
                                                         position,
-                                                        dimensions
+                                                        dimensions,
                                                     ),
                                                 }}></div>
                                         );
@@ -398,7 +398,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                         length =
                                             (Math.sqrt(
                                                 mapWidth * mapWidth +
-                                                    mapHeight * mapHeight
+                                                    mapHeight * mapHeight,
                                             ) /
                                                 longestSide) *
                                             100;
@@ -409,13 +409,13 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                                 datatype="zone"
                                                 className={clsx(
                                                     'absolute w-px -translate-1/2',
-                                                    color
+                                                    color,
                                                 )}
                                                 style={{
                                                     height: `${length}%`,
                                                     ...positionToCss(
                                                         position,
-                                                        dimensions
+                                                        dimensions,
                                                     ),
                                                     transform: `rotate(${angle}rad)`,
                                                 }}></div>
@@ -424,7 +424,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                         length =
                                             (Math.sqrt(
                                                 mapWidth * mapWidth +
-                                                    mapHeight * mapHeight
+                                                    mapHeight * mapHeight,
                                             ) /
                                                 longestSide) *
                                             100;
@@ -435,13 +435,13 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                                 datatype="zone"
                                                 className={clsx(
                                                     'absolute w-px -translate-1/2',
-                                                    color
+                                                    color,
                                                 )}
                                                 style={{
                                                     height: `${length}%`,
                                                     ...positionToCss(
                                                         position,
-                                                        dimensions
+                                                        dimensions,
                                                     ),
                                                     transform: `rotate(-${angle}rad)`,
                                                 }}></div>
@@ -450,7 +450,7 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                         console.error('invalid shape');
                                         return null;
                                 }
-                            }
+                            },
                         )}
                     </div>
                     <div className="z-10">
@@ -462,12 +462,12 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                     className={clsx(
                                         'absolute rounded-full -translate-1/2',
                                         `size-${size}`,
-                                        color
+                                        color,
                                     )}
                                     style={{
                                         ...positionToCss(position, dimensions),
                                     }}></div>
-                            )
+                            ),
                         )}
                     </div>
                 </MapBase>
@@ -484,7 +484,8 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                     .filter(({ excludeLegend }) => !excludeLegend)
                     .filter(
                         ({ name }, index, self) =>
-                            self.findIndex((obj) => obj.name === name) === index
+                            self.findIndex((obj) => obj.name === name) ===
+                            index,
                     )
                     .map(({ name, color }) => {
                         return (
@@ -494,8 +495,8 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                                 className="flex leading-none">
                                 <span
                                     className={clsx(
-                                        'mr-2 inline-block w-[1em] h-[1em]',
-                                        color
+                                        'mr-2 inline-block size-[1em] legend',
+                                        color,
                                     )}></span>
                                 {name}
                             </div>
@@ -505,7 +506,8 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                     .filter(({ excludeLegend }) => !excludeLegend)
                     .filter(
                         ({ name }, index, self) =>
-                            self.findIndex((obj) => obj.name === name) === index
+                            self.findIndex((obj) => obj.name === name) ===
+                            index,
                     )
                     .map(({ name, color }) => (
                         <div
@@ -514,8 +516,8 @@ const DeploymentMapDisplay: React.FC<Props> = ({
                             className="flex leading-none">
                             <span
                                 className={clsx(
-                                    'mr-2 inline-block w-[1em] h-[1em] rounded-full',
-                                    color
+                                    'mr-2 inline-block size-[1em] rounded-full legend',
+                                    color,
                                 )}></span>
                             {name}
                         </div>
