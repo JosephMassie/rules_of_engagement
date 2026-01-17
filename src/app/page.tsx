@@ -42,13 +42,14 @@ export default function Home() {
                             width={300}
                             height={300}
                             className="block size-10"
+                            unoptimized
                         />
                     </a>
                 </Button>
 
                 <Button asChild className="block w-auto h-auto">
                     <a href={githubLink}>
-                        <FaGithub className='size-10' />
+                        <FaGithub className="size-10" />
                     </a>
                 </Button>
             </div>
