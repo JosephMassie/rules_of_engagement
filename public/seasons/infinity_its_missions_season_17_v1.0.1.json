@@ -60,6 +60,155 @@
                 ],
                 "special_notes": [
                     "It is not allowed to deploy in Silhouette contact with the Akial Antenna or with any HVT."
+                ],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Akial Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [24, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 24,
+                                "start": [24, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Akial Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [16, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 16,
+                                "start": [16, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Akial Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [12, 16]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 8,
+                                "start": [0, 24],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [12, 32],
+                                "placement": "bottom"
+                            }
+                        ]
+                    }
                 ]
             },
             "scenario_special_rules": {
@@ -143,6 +292,245 @@
                 ],
                 "special_notes": [
                     "Exclusion Zone is the area covering 4 inches (2 inches in 150 point games) either side of the central line of the game table."
+                ],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 32],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 20],
+                                "hideName": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [12, 24]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [36, 24]
+                            },
+                            {
+                                "name": "Tracking Beacon",
+                                "color": "bg-blue-600",
+                                "size": 2,
+                                "position": [24, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 4,
+                                "start": [0, 20],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 16,
+                                "start": [0, 32],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 24,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 12,
+                                "start": [36, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 32],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 20],
+                                "hideName": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [8, 24]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [24, 24]
+                            },
+                            {
+                                "name": "Tracking Beacon",
+                                "color": "bg-blue-600",
+                                "size": 2,
+                                "position": [16, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 4,
+                                "start": [0, 20],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 16,
+                                "start": [0, 32],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 16,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 8,
+                                "start": [24, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 20],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 4,
+                                "position": [0, 14],
+                                "hideName": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [6, 16]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [18, 16]
+                            },
+                            {
+                                "name": "Tracking Beacon",
+                                "color": "bg-blue-600",
+                                "size": 2,
+                                "position": [12, 16]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 2,
+                                "start": [0, 14],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 20],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 32],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 6,
+                                "start": [18, 32],
+                                "placement": "bottom"
+                            }
+                        ]
+                    }
                 ]
             },
             "scenario_special_rules": {
@@ -228,6 +616,263 @@
                 ],
                 "special_notes": [
                     "Exclusion Zone is the area covering 4 inches either side of the central line of the game table."
+                ],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 20],
+                                "hideName": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Panoply",
+                                "color": "bg-fuchsia-600",
+                                "size": 4,
+                                "position": [24, 12]
+                            },
+                            {
+                                "name": "Panoply",
+                                "color": "bg-fuchsia-600",
+                                "size": 4,
+                                "position": [24, 36]
+                            },
+                            {
+                                "name": "Prototype",
+                                "color": "bg-blue-600",
+                                "size": 4,
+                                "position": [12, 24]
+                            },
+                            {
+                                "name": "Prototype",
+                                "color": "bg-blue-600",
+                                "size": 4,
+                                "position": [36, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 4,
+                                "start": [0, 20],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 24,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 12,
+                                "start": [36, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 20],
+                                "hideName": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Panoply",
+                                "color": "bg-fuchsia-600",
+                                "size": 4,
+                                "position": [16, 12]
+                            },
+                            {
+                                "name": "Panoply",
+                                "color": "bg-fuchsia-600",
+                                "size": 4,
+                                "position": [16, 36]
+                            },
+                            {
+                                "name": "Prototype",
+                                "color": "bg-blue-600",
+                                "size": 4,
+                                "position": [8, 24]
+                            },
+                            {
+                                "name": "Prototype",
+                                "color": "bg-blue-600",
+                                "size": 4,
+                                "position": [24, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 4,
+                                "start": [0, 20],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 16,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 8,
+                                "start": [24, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 12],
+                                "hideName": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Panoply",
+                                "color": "bg-fuchsia-600",
+                                "size": 4,
+                                "position": [12, 24]
+                            },
+                            {
+                                "name": "Panoply",
+                                "color": "bg-fuchsia-600",
+                                "size": 4,
+                                "position": [12, 8]
+                            },
+                            {
+                                "name": "Prototype",
+                                "color": "bg-blue-600",
+                                "size": 4,
+                                "position": [6, 16]
+                            },
+                            {
+                                "name": "Prototype",
+                                "color": "bg-blue-600",
+                                "size": 4,
+                                "position": [18, 16]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 4,
+                                "start": [0, 12],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 8,
+                                "start": [0, 24],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 32],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 6,
+                                "start": [18, 32],
+                                "placement": "bottom"
+                            }
+                        ]
+                    }
                 ]
             },
             "scenario_special_rules": {
@@ -398,7 +1043,273 @@
                         "deployment_zone": "12 in x 48 in"
                     }
                 ],
-                "special_notes": []
+                "special_notes": [],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 20],
+                                "hideName": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Wide Access (open)",
+                                "color": "obj-room",
+                                "shape": "box",
+                                "size": 8,
+                                "position": [24, 24],
+                                "hideName": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Inhibitor Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [21, 29]
+                            },
+                            {
+                                "name": "Data Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [24, 24]
+                            },
+                            {
+                                "name": "Turret",
+                                "color": "bg-black",
+                                "size": 2,
+                                "position": [21, 21]
+                            },
+                            {
+                                "name": "Turret",
+                                "color": "bg-black",
+                                "size": 2,
+                                "position": [27, 27]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 4,
+                                "start": [0, 20],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 24,
+                                "start": [24, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 20],
+                                "hideName": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Wide Access (open)",
+                                "color": "obj-room",
+                                "shape": "box",
+                                "size": 8,
+                                "position": [16, 24],
+                                "hideName": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Inhibitor Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [13, 29]
+                            },
+                            {
+                                "name": "Data Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [16, 24]
+                            },
+                            {
+                                "name": "Turret",
+                                "color": "bg-black",
+                                "size": 2,
+                                "position": [13, 21]
+                            },
+                            {
+                                "name": "Turret",
+                                "color": "bg-black",
+                                "size": 2,
+                                "position": [19, 27]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 4,
+                                "start": [0, 20],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 16,
+                                "start": [16, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 12],
+                                "hideName": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Wide Access (open)",
+                                "color": "obj-room",
+                                "shape": "box",
+                                "size": 8,
+                                "position": [12, 16],
+                                "hideName": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Inhibitor Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [9, 21]
+                            },
+                            {
+                                "name": "Data Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [12, 16]
+                            },
+                            {
+                                "name": "Turret",
+                                "color": "bg-black",
+                                "size": 2,
+                                "position": [9, 13]
+                            },
+                            {
+                                "name": "Turret",
+                                "color": "bg-black",
+                                "size": 2,
+                                "position": [15, 19]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 4,
+                                "start": [0, 12],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 8,
+                                "start": [0, 24],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [12, 32],
+                                "placement": "bottom"
+                            }
+                        ]
+                    }
+                ]
             },
             "scenario_special_rules": {
                 "attacker_and_defender": "In this scenario, two distinct roles are established: Attacker and Defender. Each has different Main Objectives. The player with the first Player Turn is the Attacker. The player with the second Player Turn is the Defender. Before the Deployment Phase, the Defender may spend 1 single Command Token to perform one of the following actions: ^ Activate the Server Room Defense System. ^ Ignore the Deployment Restriction for the Server Room. You can deploy up to 65 points of Troops from your Army List, anywhere in the Server Room. This does not require the use of Special Skills with the Superior Deployment Label. 32",
@@ -486,6 +1397,284 @@
                 "special_notes": [
                     "It is not permitted to deploy in Silhouette contact with the Antennas.",
                     "Exclusion Zones are the areas between the Deployment Zones."
+                ],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 12],
+                                "hideName": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 28],
+                                "hideName": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 4,
+                                "position": [0, 20],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 4,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [12, 24]
+                            },
+                            {
+                                "name": "Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [36, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 4,
+                                "start": [0, 20],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [36, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 12],
+                                "hideName": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 28],
+                                "hideName": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 4,
+                                "position": [0, 20],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 4,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [8, 24]
+                            },
+                            {
+                                "name": "Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [24, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 4,
+                                "start": [0, 20],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 8,
+                                "start": [24, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 4,
+                                "position": [0, 8],
+                                "hideName": true
+                            },
+                            {
+                                "name": "Exclusion Zone",
+                                "color": "exclusion-zone",
+                                "shape": "full-width",
+                                "size": 4,
+                                "position": [0, 20],
+                                "hideName": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 4,
+                                "position": [0, 12],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 4,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [6, 16]
+                            },
+                            {
+                                "name": "Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [18, 16]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 4,
+                                "start": [0, 12],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 8,
+                                "start": [0, 24],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 6,
+                                "start": [18, 32],
+                                "placement": "bottom"
+                            }
+                        ]
+                    }
                 ]
             },
             "scenario_special_rules": {
@@ -563,6 +1752,275 @@
                 ],
                 "special_notes": [
                     "It is not allowed to deploy in Silhouette contact with a Civilian."
+                ],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Evacuation Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [16, 24]
+                            },
+                            {
+                                "name": "Evacuation Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [32, 24]
+                            },
+                            {
+                                "name": "Civilian",
+                                "color": "bg-cyan-600",
+                                "size": 2,
+                                "position": [6, 16]
+                            },
+                            {
+                                "name": "Civilian",
+                                "color": "bg-cyan-600",
+                                "size": 2,
+                                "position": [6, 32]
+                            },
+                            {
+                                "name": "Civilian",
+                                "color": "bg-cyan-600",
+                                "size": 2,
+                                "position": [42, 16]
+                            },
+                            {
+                                "name": "Civilian",
+                                "color": "bg-cyan-600",
+                                "size": 2,
+                                "position": [42, 32]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 16,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 6,
+                                "start": [42, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 16,
+                                "start": [48, 0],
+                                "placement": "right"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Evacuation Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [12, 24]
+                            },
+                            {
+                                "name": "Evacuation Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [20, 24]
+                            },
+                            {
+                                "name": "Civilian",
+                                "color": "bg-cyan-600",
+                                "size": 2,
+                                "position": [6, 16]
+                            },
+                            {
+                                "name": "Civilian",
+                                "color": "bg-cyan-600",
+                                "size": 2,
+                                "position": [6, 32]
+                            },
+                            {
+                                "name": "Civilian",
+                                "color": "bg-cyan-600",
+                                "size": 2,
+                                "position": [26, 16]
+                            },
+                            {
+                                "name": "Civilian",
+                                "color": "bg-cyan-600",
+                                "size": 2,
+                                "position": [26, 32]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 6,
+                                "start": [26, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 16,
+                                "start": [32, 0],
+                                "placement": "right"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Evacuation Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [8, 16]
+                            },
+                            {
+                                "name": "Evacuation Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [16, 16]
+                            },
+                            {
+                                "name": "Civilian",
+                                "color": "bg-cyan-600",
+                                "size": 2,
+                                "position": [6, 12]
+                            },
+                            {
+                                "name": "Civilian",
+                                "color": "bg-cyan-600",
+                                "size": 2,
+                                "position": [6, 20]
+                            },
+                            {
+                                "name": "Civilian",
+                                "color": "bg-cyan-600",
+                                "size": 2,
+                                "position": [18, 12]
+                            },
+                            {
+                                "name": "Civilian",
+                                "color": "bg-cyan-600",
+                                "size": 2,
+                                "position": [18, 20]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 8,
+                                "start": [0, 24],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 8,
+                                "start": [0, 32],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 6,
+                                "start": [18, 32],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 12,
+                                "start": [24, 0],
+                                "placement": "right"
+                            }
+                        ]
+                    }
                 ]
             },
             "scenario_special_rules": {
@@ -640,6 +2098,242 @@
                 ],
                 "special_notes": [
                     "It is not permitted to deploy in Silhouette contact with the Beacons or with the Consoles."
+                ],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [24, 24]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [12, 24]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [36, 24]
+                            },
+                            {
+                                "name": "Beacon A",
+                                "color": "bg-red-600",
+                                "size": 2,
+                                "position": [24, 12]
+                            },
+                            {
+                                "name": "Beacon B",
+                                "color": "bg-blue-600",
+                                "size": 2,
+                                "position": [24, 36]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 24,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 12,
+                                "start": [36, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [16, 24]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [8, 24]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [24, 24]
+                            },
+                            {
+                                "name": "Beacon A",
+                                "color": "bg-red-600",
+                                "size": 2,
+                                "position": [16, 12]
+                            },
+                            {
+                                "name": "Beacon B",
+                                "color": "bg-blue-600",
+                                "size": 2,
+                                "position": [16, 36]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 16,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 8,
+                                "start": [24, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [12, 16]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [6, 16]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [18, 16]
+                            },
+                            {
+                                "name": "Beacon A",
+                                "color": "bg-red-600",
+                                "size": 2,
+                                "position": [12, 8]
+                            },
+                            {
+                                "name": "Beacon B",
+                                "color": "bg-blue-600",
+                                "size": 2,
+                                "position": [12, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 8,
+                                "start": [0, 24],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 32],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 6,
+                                "start": [18, 32],
+                                "placement": "bottom"
+                            }
+                        ]
+                    }
                 ]
             },
             "scenario_special_rules": {
@@ -721,7 +2415,255 @@
                         "deployment_zone": "12 in x 48 in"
                     }
                 ],
-                "special_notes": []
+                "special_notes": [],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 32],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "No Deployment",
+                                "color": "exclusion-zone",
+                                "shape": "box",
+                                "size": 8,
+                                "position": [24, 24],
+                                "hideName": true
+                            },
+                            {
+                                "name": "Wide Access (open)",
+                                "color": "obj-room",
+                                "shape": "box",
+                                "size": 8,
+                                "position": [24, 24],
+                                "hideName": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "ID Checker",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [24, 24]
+                            },
+                            {
+                                "name": "ID Scanner",
+                                "color": "bg-violet-600",
+                                "size": 4,
+                                "position": [12, 24]
+                            },
+                            {
+                                "name": "ID Scanner",
+                                "color": "bg-violet-600",
+                                "size": 4,
+                                "position": [36, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 16,
+                                "start": [0, 32],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 24,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 12,
+                                "start": [36, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "No Deployment",
+                                "color": "exclusion-zone",
+                                "shape": "box",
+                                "size": 8,
+                                "position": [16, 24],
+                                "hideName": true
+                            },
+                            {
+                                "name": "Wide Access (open)",
+                                "color": "obj-room",
+                                "shape": "box",
+                                "size": 8,
+                                "position": [16, 24],
+                                "hideName": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "ID Checker",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [16, 24]
+                            },
+                            {
+                                "name": "ID Scanner",
+                                "color": "bg-violet-600",
+                                "size": 4,
+                                "position": [8, 24]
+                            },
+                            {
+                                "name": "ID Scanner",
+                                "color": "bg-violet-600",
+                                "size": 4,
+                                "position": [24, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 16,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 8,
+                                "start": [24, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "No Deployment",
+                                "color": "exclusion-zone",
+                                "shape": "box",
+                                "size": 8,
+                                "position": [12, 16],
+                                "hideName": true
+                            },
+                            {
+                                "name": "Wide Access (open)",
+                                "color": "obj-room",
+                                "shape": "box",
+                                "size": 8,
+                                "position": [12, 16],
+                                "hideName": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "ID Checker",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [12, 16]
+                            },
+                            {
+                                "name": "ID Scanner",
+                                "color": "bg-violet-600",
+                                "size": 4,
+                                "position": [4, 16]
+                            },
+                            {
+                                "name": "ID Scanner",
+                                "color": "bg-violet-600",
+                                "size": 4,
+                                "position": [20, 16]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 8,
+                                "start": [0, 24],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 32],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 4,
+                                "start": [20, 32],
+                                "placement": "bottom"
+                            }
+                        ]
+                    }
+                ]
             },
             "scenario_special_rules": {
                 "id_scanners": "There are 2 ID Scanners placed on the central line of the table. They are placed 8 inches from the table edges (4 inches in 150 point games). The ID Scanners must be represented by a Tech-Coffin Token or with a scenery piece of the same diameter (such as the Tech- Coffins of the ITS Objective Pack Alpha, the Stasis Coffins by Warsenal, or the Cryo Pods by Customeeple).",
@@ -1966,7 +3908,249 @@
                         "deployment_zone": "12 in x 48 in"
                     }
                 ],
-                "special_notes": []
+                "special_notes": [],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "vert-line",
+                                "size": 12,
+                                "position": [24, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [12, 18]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [12, 30]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [36, 18]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [36, 30]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 18,
+                                "start": [0, 0],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "vert-line",
+                                "size": 12,
+                                "position": [16, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 36],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [8, 18]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [8, 30]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [24, 18]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [24, 30]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 18,
+                                "start": [0, 0],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 36],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 8,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "vert-line",
+                                "size": 12,
+                                "position": [12, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 8,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [6, 12]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [6, 20]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [18, 20]
+                            },
+                            {
+                                "name": "Console",
+                                "color": "bg-lime-600",
+                                "size": 4,
+                                "position": [18, 12]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 0],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 8,
+                                "start": [0, 24],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 6,
+                                "start": [0, 32],
+                                "placement": "bottom"
+                            }
+                        ]
+                    }
+                ]
             },
             "scenario_special_rules": {
                 "quadrants_(zo)": "At the end of each Game Round, but not before, the table is divided into four Quadrants as seen on the map. Each player then checks how many Quadrants they are dominating and counts their Objective Points. In this scenario each Quadrant is a Zone of Operations (ZO).",
@@ -2043,6 +4227,206 @@
                 ],
                 "special_notes": [
                     "It is not permitted to deploy in Silhouette contact with the TechCoffin or with the Communication Antennas."
+                ],
+                "maps": [
+                    {
+                        "gameSizes": "300P / 350P / 400P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 32],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Tech-Coffin",
+                                "color": "bg-violet-600",
+                                "size": 4,
+                                "position": [24, 24]
+                            },
+                            {
+                                "name": "Communication Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [12, 24]
+                            },
+                            {
+                                "name": "Communication Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [36, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 16,
+                                "start": [0, 32],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 24,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 12,
+                                "start": [36, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "200P / 250P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 16,
+                                "position": [0, 32],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 24],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Tech-Coffin",
+                                "color": "bg-violet-600",
+                                "size": 4,
+                                "position": [16, 24]
+                            },
+                            {
+                                "name": "Communication Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [8, 24]
+                            },
+                            {
+                                "name": "Communication Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [24, 24]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 16,
+                                "start": [0, 32],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 16,
+                                "start": [0, 48],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 8,
+                                "start": [24, 48],
+                                "placement": "bottom"
+                            }
+                        ]
+                    },
+                    {
+                        "gameSizes": "150P",
+                        "zones": [
+                            {
+                                "name": "Deployment Zone A",
+                                "color": "bg-amber-600 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 0],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "Deployment Zone B",
+                                "color": "bg-green-800 text-white",
+                                "shape": "full-width",
+                                "size": 12,
+                                "position": [0, 20],
+                                "excludeLegend": true
+                            },
+                            {
+                                "name": "center-line",
+                                "color": "bg-black",
+                                "shape": "horiz-line",
+                                "size": 12,
+                                "position": [0, 16],
+                                "excludeLegend": true
+                            }
+                        ],
+                        "objects": [
+                            {
+                                "name": "Tech-Coffin",
+                                "color": "bg-violet-600",
+                                "size": 4,
+                                "position": [12, 16]
+                            },
+                            {
+                                "name": "Communication Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [6, 16]
+                            },
+                            {
+                                "name": "Communication Antenna",
+                                "color": "bg-yellow-500",
+                                "size": 4,
+                                "position": [18, 16]
+                            }
+                        ],
+                        "rulers": [
+                            {
+                                "length": 12,
+                                "start": [0, 20],
+                                "placement": "left"
+                            },
+                            {
+                                "length": 12,
+                                "start": [0, 32],
+                                "placement": "bottom"
+                            },
+                            {
+                                "length": 6,
+                                "start": [18, 32],
+                                "placement": "bottom"
+                            }
+                        ]
+                    }
                 ]
             },
             "scenario_special_rules": {
