@@ -1,3 +1,53 @@
+export type GameSize = '150P' | '200P / 250P' | '300P / 350P / 400P';
+
+export type MapPosition = [number, number];
+
+type MapOutsideRulerPlacement = 'left' | 'right' | 'top' | 'bottom';
+export type MapRulerPlacement = MapOutsideRulerPlacement | 'inside';
+
+export type MapOutsideRuler = {
+    length: number;
+    placement: MapOutsideRulerPlacement;
+    start: MapPosition;
+};
+
+export type MapInsideRuler = {
+    length?: number;
+    placement: 'inside';
+    start: MapPosition;
+    end: MapPosition;
+};
+
+export type MapShape =
+    | 'full-width'
+    | 'circle'
+    | 'box'
+    | 'horiz-line'
+    | 'vert-line'
+    | 'diag-line'
+    | 'diag-line-flipped';
+
+export type DeploymentMap = {
+    zones: Array<{
+        name: string;
+        color: string;
+        position: MapPosition;
+        size: number;
+        shape: MapShape;
+        excludeLegend?: boolean;
+        hideName?: boolean;
+    }>;
+    objects: Array<{
+        name: string;
+        position: MapPosition;
+        size: number;
+        color: string;
+        excludeLegend?: boolean;
+    }>;
+    gameSizes: GameSize;
+    rulers?: Array<MapOutsideRuler | MapInsideRuler>;
+};
+
 export type DeploymentTableEntry = {
     army_points: number;
     swc: number;
@@ -30,6 +80,7 @@ export type MissionData = {
         sides: string;
         deployment_table: Array<DeploymentTableEntry>;
         special_notes: Array<string>;
+        maps?: Array<DeploymentMap>;
     };
     scenario_special_rules: Record<string, ScenarioSpecialRule>;
     end_of_mission: string;

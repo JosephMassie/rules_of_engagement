@@ -1,7 +1,7 @@
 'use client';
 
 import { fromKey } from '@/lib/string_utils';
-import { HTMLProps } from 'react';
+import { HTMLProps, useState } from 'react';
 import { Badge } from './ui/badge';
 import { useSeasons } from '@/stores/useSeasons';
 import { Separator } from './ui/separator';
@@ -10,6 +10,14 @@ import { Alert, AlertDescription, AlertTitle } from './ui/alert';
 import { AlertOctagonIcon } from 'lucide-react';
 import ScenarioRule from './scenario_rule';
 import Objectives from './objectives';
+import {
+    Select,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+    SelectContent,
+} from './ui/select';
+import DeploymentMapDisplay from './deployment_map';
 
 type Props = HTMLProps<HTMLDivElement> & {
     seasonKey: string;
@@ -22,6 +30,8 @@ export default function MissionDisplay({
     ...props
 }: Props) {
     const seasonsData = useSeasons();
+
+    const [gameSize, setGameSize] = useState(0);
 
     if (!seasonsData.loaded) {
         seasonsData.load();
@@ -122,6 +132,43 @@ export default function MissionDisplay({
                                 )}
                             </tbody>
                         </table>
+
+                        {mission.forces_and_deployment.maps && (
+                            <div className="mb-4 w-full grid justify-center items-center gap-4">
+                                <Select
+                                    value={gameSize.toFixed()}
+                                    onValueChange={(value) =>
+                                        setGameSize(parseInt(value))
+                                    }>
+                                    <SelectTrigger className="m-auto">
+                                        <SelectValue placeholder="Select a Game Size" />
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        {mission.forces_and_deployment.maps?.map(
+                                            ({ gameSizes }, i) => (
+                                                <SelectItem
+                                                    key={gameSizes}
+                                                    value={i.toFixed()}>
+                                                    {gameSizes}
+                                                </SelectItem>
+                                            )
+                                        )}
+                                    </SelectContent>
+                                </Select>
+
+                                <div>
+                                    <DeploymentMapDisplay
+                                        map={
+                                            mission.forces_and_deployment.maps[
+                                                gameSize
+                                            ]
+                                        }
+                                        hideGameSize
+                                    />
+                                </div>
+                            </div>
+                        )}
+
                         {mission.forces_and_deployment.special_notes.length >
                             0 && (
                             <Alert className="mx-auto w-fit text-left bg-accent-foreground text-destructive">
