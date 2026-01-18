@@ -51,8 +51,8 @@ export default function RootLayout({
                             </Link>
                         </Button>
                         <Button asChild variant="secondary">
-                            <Link className="ml-4 text-sm" href="/seasons">
-                                Seasons
+                            <Link className="ml-4 text-sm" href="/mission_packs">
+                                Mission Packs
                             </Link>
                         </Button>
                         <div className="ml-auto">

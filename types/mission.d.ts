@@ -86,7 +86,7 @@ export type MissionData = {
     end_of_mission: string;
 };
 
-export type SeasonData = {
+export type MissionPackData = {
     name: string;
     version: string;
     missions: Array<MissionData>;

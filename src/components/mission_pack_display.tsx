@@ -1,7 +1,7 @@
 'use client';
 
 import { fromKey, toKey } from '@/lib/string_utils';
-import { useSeasons } from '@/stores/useSeasons';
+import { useMissionPacks } from '@/stores/useMissionPacks';
 import { HTMLProps } from 'react';
 import { MissionData } from '../../types/mission';
 import Link from 'next/link';
@@ -28,8 +28,8 @@ function MissionList({
                     return (
                         <Link
                             key={toKey(mission.name)}
-                            href={`/seasons/${seasonKey}/missions/${toKey(
-                                mission.name
+                            href={`/mission_packs/${seasonKey}/missions/${toKey(
+                                mission.name,
                             )}`}
                             onClick={() =>
                                 posthog.capture('mission_selected', {
@@ -49,52 +49,52 @@ function MissionList({
 }
 
 type Props = HTMLProps<HTMLDivElement> & {
-    seasonKey: string;
+    packKey: string;
 };
 
-export default function SeasonDisplay({ seasonKey, ...props }: Props) {
-    const seasonsData = useSeasons();
+export default function MissionPackDisplay({ packKey, ...props }: Props) {
+    const missionPacksData = useMissionPacks();
 
-    if (!seasonsData.loaded) {
-        seasonsData.load();
+    if (!missionPacksData.loaded) {
+        missionPacksData.load();
         return <div {...props}>Loading season data…</div>;
     }
 
-    const season = seasonsData.getSeason(seasonKey);
-    if (!season) {
-        return <div {...props}>Season {`"${seasonKey}"`} not found.</div>;
+    const missionPack = missionPacksData.getSeason(packKey);
+    if (!missionPack) {
+        return <div {...props}>Mission Pack {`"${packKey}"`} not found.</div>;
     }
 
     // filter missions based on type
-    const itsScenarios = season.missions.filter(
-        (m) => m.type === 'ITS Scenario'
+    const itsScenarios = missionPack.missions.filter(
+        (m) => m.type === 'ITS Scenario',
     );
-    const directActions = season.missions.filter(
-        (m) => m.type === 'Direct Action'
+    const directActions = missionPack.missions.filter(
+        (m) => m.type === 'Direct Action',
     );
-    const customMissions = season.missions.filter((m) => m.type === 'Custom');
+    const customMissions = missionPack.missions.filter((m) => m.type === 'Custom');
 
     return (
         <div {...props}>
             <h1 className="mb-6 text-4xl md:text-6xl font-decorative">
-                {fromKey(season.name)}{' '}
-                <span className="text-sm text-accent">v{season.version}</span>
+                {fromKey(missionPack.name)}{' '}
+                <span className="text-sm text-accent">v{missionPack.version}</span>
             </h1>
 
             <MissionList
-                seasonKey={seasonKey}
+                seasonKey={packKey}
                 missions={itsScenarios}
                 header="ITS Scenarios"
             />
 
             <MissionList
-                seasonKey={seasonKey}
+                seasonKey={packKey}
                 missions={directActions}
                 header="Direct Actions"
             />
 
             <MissionList
-                seasonKey={seasonKey}
+                seasonKey={packKey}
                 missions={customMissions}
                 header="Custom Missions"
             />

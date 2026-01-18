@@ -1,19 +1,19 @@
 import fs from 'fs/promises';
 import path from 'path';
-import type { SeasonData } from '../../types/mission';
+import type { MissionPackData } from '../../types/mission';
 import { toKey } from './string_utils';
-import { isSeasonData } from './utils';
+import { isMissionPackData } from './utils';
 
-let cache: Record<string, SeasonData> | null = null;
+let cache: Record<string, MissionPackData> | null = null;
 
-export async function loadSeasons(opts?: {
+export async function loadMissionPacks(opts?: {
     useCache?: boolean;
-}): Promise<Record<string, SeasonData>> {
+}): Promise<Record<string, MissionPackData>> {
     const useCache = opts?.useCache ?? false;
 
     if (useCache && cache) return cache;
 
-    const dir = path.join(process.cwd(), 'public', 'seasons');
+    const dir = path.join(process.cwd(), 'public', 'mission_packs');
     let files: string[] = [];
     try {
         files = await fs.readdir(dir);
@@ -23,7 +23,7 @@ export async function loadSeasons(opts?: {
         return {};
     }
 
-    const seasons: Record<string, SeasonData> = {};
+    const missionPacks: Record<string, MissionPackData> = {};
 
     await Promise.all(
         files
@@ -33,30 +33,30 @@ export async function loadSeasons(opts?: {
                 try {
                     const raw = await fs.readFile(filePath, 'utf8');
                     const parsed = JSON.parse(raw);
-                    if (isSeasonData(parsed)) {
-                        seasons[toKey(parsed.name)] = parsed;
+                    if (isMissionPackData(parsed)) {
+                        missionPacks[toKey(parsed.name)] = parsed;
                     } else {
                         console.warn(
-                            `Skipping ${file}: does not match SeasonData shape`
+                            `Skipping ${file}: does not match MissionPackData shape`,
                         );
                     }
                 } catch (err) {
                     console.warn(`Failed to read/parse ${file}:`, err);
                 }
-            })
+            }),
     );
 
-    cache = seasons;
-    return seasons;
+    cache = missionPacks;
+    return missionPacks;
 }
 
-export async function getSeasonByKey(
-    key: string
-): Promise<SeasonData | undefined> {
-    const seasons = await loadSeasons();
-    return seasons[key];
+export async function getMissionPackByKey(
+    key: string,
+): Promise<MissionPackData | undefined> {
+    const missionPacks = await loadMissionPacks();
+    return missionPacks[key];
 }
 
-export function invalidateSeasonsCache(): void {
+export function invalidateMissionPacksCache(): void {
     cache = null;
 }

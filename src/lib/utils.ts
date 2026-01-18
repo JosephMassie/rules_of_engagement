@@ -1,12 +1,16 @@
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { MapInsideRuler, MissionSkill, SeasonData } from '../../types/mission';
+import {
+    MapInsideRuler,
+    MissionSkill,
+    MissionPackData,
+} from '../../types/mission';
 
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
 }
 
-export function isSeasonData(obj: unknown): obj is SeasonData {
+export function isMissionPackData(obj: unknown): obj is MissionPackData {
     if (typeof obj !== 'object' || obj === null) return false;
     const o = obj as Record<string, unknown>;
     return (

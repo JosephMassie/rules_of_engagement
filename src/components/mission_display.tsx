@@ -3,7 +3,7 @@
 import { fromKey } from '@/lib/string_utils';
 import { HTMLProps, useState } from 'react';
 import { Badge } from './ui/badge';
-import { useSeasons } from '@/stores/useSeasons';
+import { useMissionPacks } from '@/stores/useMissionPacks';
 import { Separator } from './ui/separator';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Alert, AlertDescription, AlertTitle } from './ui/alert';
@@ -21,37 +21,37 @@ import DeploymentMapDisplay from './deployment_map';
 import posthog from 'posthog-js';
 
 type Props = HTMLProps<HTMLDivElement> & {
-    seasonKey: string;
+    packKey: string;
     missionKey: string;
 };
 
 export default function MissionDisplay({
-    seasonKey,
+    packKey,
     missionKey,
     ...props
 }: Props) {
-    const seasonsData = useSeasons();
+    const missionPacksData = useMissionPacks();
 
     const [gameSize, setGameSize] = useState(0);
 
-    if (!seasonsData.loaded) {
-        seasonsData.load();
-        return <div {...props}>Loading season data…</div>;
+    if (!missionPacksData.loaded) {
+        missionPacksData.load();
+        return <div {...props}>Loading mission pack data…</div>;
     }
 
-    const season = seasonsData.getSeason(seasonKey);
-    if (!season) {
-        return <div {...props}>Season {`"${seasonKey}"`} not found.</div>;
+    const missionPack = missionPacksData.getSeason(packKey);
+    if (!missionPack) {
+        return <div {...props}>Mission Pack {`"${packKey}"`} not found.</div>;
     }
 
-    const mission = season.missions.find(
-        (m) => m.name.toLowerCase() === fromKey(missionKey).toLowerCase()
+    const mission = missionPack.missions.find(
+        (m) => m.name.toLowerCase() === fromKey(missionKey).toLowerCase(),
     );
     if (!mission) {
         return (
             <div {...props}>
-                Mission {`"${missionKey}"`} not found in season{' '}
-                {`"${seasonKey}"`}.
+                Mission {`"${missionKey}"`} not found in mission pack {`"${packKey}"`}
+                .
             </div>
         );
     }
@@ -129,7 +129,7 @@ export default function MissionDisplay({
                                                 {entry.deployment_zone}
                                             </td>
                                         </tr>
-                                    )
+                                    ),
                                 )}
                             </tbody>
                         </table>
@@ -142,13 +142,12 @@ export default function MissionDisplay({
                                         const newGameSize = parseInt(value);
                                         setGameSize(newGameSize);
                                         const selectedMap =
-                                            mission.forces_and_deployment.maps?.[
-                                                newGameSize
-                                            ];
+                                            mission.forces_and_deployment
+                                                .maps?.[newGameSize];
                                         posthog.capture('game_size_changed', {
                                             mission_name: mission.name,
                                             mission_key: missionKey,
-                                            season_key: seasonKey,
+                                            season_key: packKey,
                                             game_size_index: newGameSize,
                                             game_sizes_label:
                                                 selectedMap?.gameSizes,
@@ -165,7 +164,7 @@ export default function MissionDisplay({
                                                     value={i.toFixed()}>
                                                     {gameSizes}
                                                 </SelectItem>
-                                            )
+                                            ),
                                         )}
                                     </SelectContent>
                                 </Select>
@@ -193,7 +192,7 @@ export default function MissionDisplay({
                                         {mission.forces_and_deployment.special_notes.map(
                                             (note, index) => (
                                                 <li key={index}>{note}</li>
-                                            )
+                                            ),
                                         )}
                                     </ul>
                                 </AlertDescription>
@@ -217,7 +216,7 @@ export default function MissionDisplay({
                                         ruleData={value}
                                         key={key}
                                     />
-                                )
+                                ),
                             )}
                         </div>
                     </CardContent>
