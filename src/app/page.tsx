@@ -35,7 +35,9 @@ export default function Home() {
                     asChild
                     variant="outline"
                     className="block w-auto h-auto">
-                    <a href="https://ko-fi.com/jmm370142">
+                    <a
+                        href="https://ko-fi.com/jmm370142"
+                        data-ph-capture-attribute="kofi-link">
                         <Image
                             src="/Sparkle mug.gif"
                             alt="kofi link"

@@ -215,7 +215,7 @@
                 "common_classified_objectives": "Both players share 2 Common Classified Objectives each Game Round, which are Public Information. At the beginning of the first Game Round, each player must shuffle their Classified Deck in front of their opponent. Then each player must draw two cards, select one of them as their Private Classified Objective, and the other as a Common Classified Objective for the first Game Round. Once both players have selected a Common Classified Objective, they are revealed at the same time. At the beginning of Game Rounds two and three, any current Common Classified Objective cards that have not been accomplished by either player are discarded. The Common Classified Objective cards that have been accomplished are moved to a separate area, so that each player can keep track of which cards have been accomplished. Player A and Player B Tokens can be used to mark which player has accomplished each Common Classified Objective card. It is recommended each player uses a different kind of Token. Each player then draws two cards from their Classified Deck, chooses one as a Common Classified Objective, and discards the other. Any Common Classified Objective that is checked “at the end of the game” or “during the game” can be accomplished at the end of any Player Turn. If both players accomplished the same Common Classified Objective in the same Round, both players have accomplished it. A Common Classified Objective can only be accomplished after it has been drawn. If a player’s deck runs out of cards, shuffle their discard pile into a new deck.",
                 "private_classified_objective": "A Private Classified Objective cannot be used to Emit Akial Interference, and cannot be canceled by it. The Private Classified Objectives are Private Information.",
                 "signal_redundancy": "If, upon revealing the Common Classified Objectives, both have the same name, the player with the first Player Turn must draw another card from their Classified Deck and place it as an extra Common Classified Objective. Two Classified Objectives with the same name, whether Common or Private, can both be accomplished in the same Player Turn as long as they each have a different target or are accomplished by a different Trooper.",
-                "multiple_hvts": "Each of the players will deploy four HVTs, following the usual rules for deploying HVTs. Each HVT may only be used to accomplish one Classified Objective - once a Classified Objective targeting an HVT has been completed, that HVT Model is removed from the game table. 23",
+                "multiple_hvts": "Each of the players will deploy four HVTs, following the usual rules for deploying HVTs. Each HVT may only be used to accomplish one Classified Objective - once a Classified Objective targeting an HVT has been completed, that HVT Model is removed from the game table.",
                 "secure_hvt_or_secure_treasure_not_used": "In this scenario, the Secure HVT or Secure Treasure rule is not applied.",
                 "akial_antenna": "There is 1 Akial Antenna placed in the center of the table. The Akial Antenna must be represented by a Transmission Antenna Token (TRANS. ANTENNA) or with a scenery piece of the same diameter (such as the Antenna of the ITS Objective Pack Alpha, the Communications Array by Warsenal or the Sat Station Antenna by Customeeple).",
                 "emit_akial_interference": {
@@ -537,7 +537,7 @@
                 "tracking_beacon": "There is 1 Tracking Beacon placed in the center of the table. The Tracking Beacon must be represented by a Beacon Token (BEACON) or by a scenery piece of the same diameter (such as the Beacon from the ITS Objectives Pack Alpha, the Tactical Beacons by Micro Art Studio, the Tracking Beacons by Warsenal or the Mark One Beacons by Customeeple).",
                 "relocate_the_tracking_beacon": {
                     "name": "RELOCATE THE TRACKING BEACON",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with the Tracking Beacon. • Each Specialist Troop can only declare this Skill once per Game Round.",
                     "effects": "• Spending one Short Skill, without needing to perform a Roll, the player can Relocate the Tracking Beacon. • Place the Tracking Beacon anywhere within 4 inches of its previous position."
                 },
@@ -546,9 +546,9 @@
                 "consoles": "There are two Consoles, placed on the central line of the game table. They are placed 12 inches from the table edges in 300/350/400 point games, 8 inches in 200/250 point games, and 6 inches in 150 point games (see map). Each Console must be represented by a Console A Token or by a scenery piece of the same diameter (such as the Consoles from the ITS Objectives Pack Alpha, the Human Consoles by Micro Art Studio, the Tech Consoles by Warsenal or the Comlink Console by Customeeple).",
                 "activate_console": {
                     "name": "ACTIVATE CONSOLE",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with the Console. • The Tracking Beacon cannot be in Silhouette contact with a Trooper. • Each Specialist Troop can only successfully Activate a Console once per Game Round.",
-                    "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Activate the Console. If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • Once you successfully have Activated the Console, you must choose and perform one of the following actions: • Nudge the Tracking Beacon: Place the Tracking Beacon anywhere within 2 inches of its current position. • Magnetize the Tracking Beacon: Place the Tracking Beacon within 6 inches of its current position and directly towards the center of the game table. This action cannot be used to move the Tracking Beacon beyond the center of the table. 26"
+                    "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Activate the Console. If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • Once you successfully have Activated the Console, you must choose and perform one of the following actions: • Nudge the Tracking Beacon: Place the Tracking Beacon anywhere within 2 inches of its current position. • Magnetize the Tracking Beacon: Place the Tracking Beacon within 6 inches of its current position and directly towards the center of the game table. This action cannot be used to move the Tracking Beacon beyond the center of the table."
                 },
                 "no_quarter": "In this scenario, the Retreat! rules are not applied.",
                 "control_the_console": "At the end of each Game Round, a Console is Controlled by a player as long as that player is the only one with at least one Trooper (as a Model, not a Marker) in Silhouette contact with it. So there cannot be any enemy Troopers in Silhouette contact with the Console. Models in a Null State cannot do either.",
@@ -887,11 +887,11 @@
                     "effects": "• Spending one Short Skill, without needing a Roll, any Trooper can pick up an Enemy Prototype in any of the situations previously mentioned. • The Trooper must follow the Common Rules of Prototypes."
                 },
                 "common_rules_of_prototypes": "^ A Trooper carrying a Prototype cannot declare Move as the second Basic Short Skill of an Order. As an exception, Troopers possessing the Baggage Special Skill can declare Move as the second Basic Short Skill of the Order. ^ Only Models, and not Markers, (Camo, Impersonation, Holoechoes…) can carry the Prototypes. ^ The Prototype Token must always be kept on the table. ^ The Prototype Token always remains in Silhouette contact with the Trooper which is carrying it. ^ If the Trooper carrying the Prototype enters or is in any Null State, they drop the Prototype. Move the Prototype slightly out of Silhouette contact with the Trooper ^ Prototype Tokens do not block movement or LoF.",
-                "capturing_enemy_prototype": "A Enemy Prototype is Captured by a player if, at the end of the game, that player has a Model, but not a Marker, carrying it. That Trooper cannot be in a Null State or in Silhouette contact with any enemy Model. 29",
+                "capturing_enemy_prototype": "A Enemy Prototype is Captured by a player if, at the end of the game, that player has a Model, but not a Marker, carrying it. That Trooper cannot be in a Null State or in Silhouette contact with any enemy Model.",
                 "panoplies": "There are a total of 2 Panoplies, placed in different halves of the table, each in the middle of the front edge of the Deployment Zone. (see map) Each Panoply must be represented by an Objective Token or by a scenery piece of the same diameter (such as the Objective of the ITS Objectives Pack or the Alpha Info Hubs by Micro Art Studio).",
                 "use_panoplies": {
                     "name": "USE PANOPLIES",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• The Trooper must be in Silhouette contact with a Panoply.",
                     "effects": "• By succeeding at a WIP Roll, a Trooper gains the D-Charges weapon or, if their player prefers, makes a Roll on the Panoply Chart to obtain one different weapon or piece of equipment. Once a success has been rolled, that Trooper cannot use this Panoply again. • Troopers possessing the Booty Special Skill, or any other Skill which specifies so, don’t need to make the WIP Roll. • A Trooper in Silhouette contact with this piece of scenery may spend one"
                 },
@@ -922,45 +922,9 @@
                         "To Kill at least 85 enemy Army Points",
                         "To Kill at least 100 enemy Army Points",
                         "1 Objective Point"
-                    ],
-                    [
-                        "150-POINT GAME",
-                        "200-POINT GAME",
-                        "250-POINT GAME",
-                        "300-POINT GAME",
-                        "350-POINT GAME",
-                        "400-POINT GAME",
-                        "OBJECTIVE POINTS"
-                    ],
-                    [
-                        "To Kill at least 75 enemy Army Points",
-                        "To Kill at least 100 enemy Army Points",
-                        "To Kill at least 125 enemy Army Points",
-                        "To Kill at least 150 enemy Army Points",
-                        "To Kill at least 175 enemy Army Points",
-                        "To Kill at least 200 enemy Army Points",
-                        "2 Objective Points"
                     ]
                 ],
                 "[[objective_table_1]]": [
-                    [
-                        "150-POINT GAME",
-                        "200-POINT GAME",
-                        "250-POINT GAME",
-                        "300-POINT GAME",
-                        "350-POINT GAME",
-                        "400-POINT GAME",
-                        "OBJECTIVE POINTS"
-                    ],
-                    [
-                        "To Kill at least 40 enemy Army Points",
-                        "To Kill at least 50 enemy Army Points",
-                        "To Kill at least 65 enemy Army Points",
-                        "To Kill at least 75 enemy Army Points",
-                        "To Kill at least 85 enemy Army Points",
-                        "To Kill at least 100 enemy Army Points",
-                        "1 Objective Point"
-                    ],
                     [
                         "150-POINT GAME",
                         "200-POINT GAME",
@@ -1000,7 +964,7 @@
                     "[[objective_table_1]]"
                 ],
                 "classified": [
-                    "Each player has 1 Classified Objective (1 Objective Point). 31"
+                    "Each player has 1 Classified Objective (1 Objective Point)."
                 ]
             },
             "forces_and_deployment": {
@@ -1312,7 +1276,7 @@
                 ]
             },
             "scenario_special_rules": {
-                "attacker_and_defender": "In this scenario, two distinct roles are established: Attacker and Defender. Each has different Main Objectives. The player with the first Player Turn is the Attacker. The player with the second Player Turn is the Defender. Before the Deployment Phase, the Defender may spend 1 single Command Token to perform one of the following actions: ^ Activate the Server Room Defense System. ^ Ignore the Deployment Restriction for the Server Room. You can deploy up to 65 points of Troops from your Army List, anywhere in the Server Room. This does not require the use of Special Skills with the Superior Deployment Label. 32",
+                "attacker_and_defender": "In this scenario, two distinct roles are established: Attacker and Defender. Each has different Main Objectives. The player with the first Player Turn is the Attacker. The player with the second Player Turn is the Defender. Before the Deployment Phase, the Defender may spend 1 single Command Token to perform one of the following actions: ^ Activate the Server Room Defense System. ^ Ignore the Deployment Restriction for the Server Room. You can deploy up to 65 points of Troops from your Army List, anywhere in the Server Room. This does not require the use of Special Skills with the Superior Deployment Label.",
                 "important": "This use of a Command Token is in addition to the Strategic Use of Command Tokens.",
                 "server_room": "In this scenario the Server Room is a Zone of Operations (ZO). Placed in the center of the table, it covers an area of 8 by 8 inches. To represent the Server Room, we recommend using the Objective Room by Micro Art Studio, the Command Bunker by Warsenal, or the Panic Room by Customeeple. In game terms it is considered to have walls of infinite height that completely block Line of Fire. It has four Gates, one in the middle of each wall (see map). The Gates of the Server Room are open at the start of the game. The Server Room Gates must be represented by a Wide Gate Token or a scenery piece with the same size.",
                 "dominate_zo": "A Zone of Operations (ZO) is Dominated by a player if they have more Victory Points than the adversary inside the area. Only Troopers represented by Models or Markers (Camouflaged, Shasvastii-Embryo...) count, as well as Proxies and Peripheral Troops. Troops in a Null State do not count. Tokens representing weapons or pieces of equipment (like Mines or Deployable Repeaters), fake Holoechoes, and any Token that does not represent a Trooper does not count either. A Trooper is inside a Zone of Operations when more than half the Trooper’s base is inside that ZO.",
@@ -1323,11 +1287,11 @@
                 "data_console": "There is 1 Data Console placed in the center of the table. Inside the Data Console is 1 single Data Pack. The Data Console must be represented by a Console A Token or by a scenery piece of the same diameter (such as the Consoles from the ITS Objectives Pack Alpha, the Human Consoles by Micro Art Studio, the Tech Consoles by Warsenal or the Comlink Console by Customeeple).",
                 "extract_data_pack": {
                     "name": "EXTRACT DATA PACK",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with the Data Console.",
                     "effects": "• Allows the Specialist Troop to make a Normal WIP-6 Roll to Extract the Data Pack, with a successful roll a DATA PACK Token must be placed besides it. • If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • If the Data Console is Unlocked, the roll is a Normal WIP roll without the -6 MOD."
                 },
-                "data_pack": "The Data Pack must be represented by a DATA PACK Token. The Trooper who has the Data Pack must always be on the game table as a Model and not as a Marker (Camouflaged, Holoecho…). Once the Data Pack is Extracted, if the Trooper carrying it enters Dead State the DATA PACK Token must be removed from the game table. 33 INHIBITOR ANTENNA There is an Inhibitor Antenna placed next to one of the outer corners of the Server Room in the Defender’s half of the game table. (see map). The Inhibitor Antenna must be represented by a Transmission Antenna Token (TRANS. ANTENNA) or with a scenery piece of the same diameter (such as the Antenna of the ITS Objective Pack Alpha, the Communications Array by Warsenal or the Sat Station Antenna by Customeeple).",
+                "data_pack": "The Data Pack must be represented by a DATA PACK Token. The Trooper who has the Data Pack must always be on the game table as a Model and not as a Marker (Camouflaged, Holoecho…). Once the Data Pack is Extracted, if the Trooper carrying it enters Dead State the DATA PACK Token must be removed from the game table. INHIBITOR ANTENNA There is an Inhibitor Antenna placed next to one of the outer corners of the Server Room in the Defender’s half of the game table. (see map). The Inhibitor Antenna must be represented by a Transmission Antenna Token (TRANS. ANTENNA) or with a scenery piece of the same diameter (such as the Antenna of the ITS Objective Pack Alpha, the Communications Array by Warsenal or the Sat Station Antenna by Customeeple).",
                 "use_inhibitor_antenna": {
                     "name": "USE INHIBITOR ANTENNA",
                     "skill_type": "short skill, Attack, Scenario",
@@ -1685,9 +1649,9 @@
                 "antennas": "There are 2 Antennas placed on the central line of the table. They are placed 12 inches from the table edges in 300/350/400 point games, 8 inches in 200/250 point games, and 6 inches in 150 point games (see map). The Antennas must be represented by Transmission Antenna Tokens (TRANS. ANTENNA) or with scenery pieces of the same diameter (such as the Antenna of the ITS Objective Pack Alpha, the Communications Array by Warsenal or the Sat Station Antenna by Customeeple).",
                 "activate_antenna": {
                     "name": "ACTIVATE ANTENNA",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with an Antenna.",
-                    "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Activate an Antenna. • If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • An Activated Antenna can be Activated again by the other player, applying the same procedure. In this situation, the Antenna is no longer Activated by the adversary. • Player A and Player B Tokens can be used to mark the Activated Antenna. It is recommended each player uses a different kind of Token. 36"
+                    "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Activate an Antenna. • If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • An Activated Antenna can be Activated again by the other player, applying the same procedure. In this situation, the Antenna is no longer Activated by the adversary. • Player A and Player B Tokens can be used to mark the Activated Antenna. It is recommended each player uses a different kind of Token."
                 },
                 "superior_deployment": "With the exception of Impersonation, Special Skills with the Superior Deployment Label cannot be used in this scenario.",
                 "secure_hvt_or_secure_treasure_not_used": "In this scenario, the Secure HVT or Secure Treasure rule is not applied.",
@@ -2029,9 +1993,9 @@
                 "extraction_consoles": "There are 2 Extraction Consoles, placed on the central line of the table. They are placed 16 inches from the edges of the table in 300/350/400 point games, 12 inches in 200/250 point games, and 8 inches in 150 point games (see map). Each Console must be represented by a Console A Token or by a scenery piece of the same diameter (such as the Consoles of the ITS Objective Pack Alpha, the Human Consoles by Micro Art Studio, the Tech Consoles by Warsenal or the Comlink Console by Customeeple).",
                 "activate_extraction_console": {
                     "name": "ACTIVATE EXTRACTION CONSOLE",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with an Extraction Console. • The Specialist Troop must be CivEvacing a Civilian or an Enemy HVT. • This Skill cannot be declared during the first Game Round.",
-                    "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Activate an Extraction Console. If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • If the roll is successful, the player chooses one of the Specialist Troop’s CivEvaced Civilians or Enemy HVTs. The chosen Civilian or HVT has been Extracted, and is removed from the game table. 39"
+                    "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Activate an Extraction Console. If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • If the roll is successful, the player chooses one of the Specialist Troop’s CivEvaced Civilians or Enemy HVTs. The chosen Civilian or HVT has been Extracted, and is removed from the game table."
                 },
                 "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops.",
                 "operational_learning": "When a Specialist Troop performs a Skill with the Scenario Label that requires a WIP Roll and fails, they benefit from the following MODs in subsequent Orders: ^ In the second consecutive Order, the Trooper applies a +3 MOD to the WIP Roll required for that Scenario Skill. ^ In the third consecutive Order—and subsequent Orders— the Trooper applies +3 and +1SD MODs to the WIP Roll required for that Scenario Skill. ^ These MODs are cumulative with any other MOD that applies to Skills with the Scenario Label.",
@@ -2340,7 +2304,7 @@
                 "beacons": "There are a total of 2 Beacons, 1 corresponding to each player, placed in different halves of the table, each in the middle of the front edge of the Deployment Zone. (see map). The Enemy Beacon is the one on the edge of the enemy Deployment Zone.",
                 "pick_up_beacon": {
                     "name": "PICK UP BEACON",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Have an Activated Console. Also, the Trooper must be in one of the following situations: • The Trooper is in Silhouette contact with a friendly Trooper in a Normal State that has an Enemy Beacon. • The Trooper is in Silhouette contact with an Enemy Beacon which has no enemy Troops in a non-Null State in contact with it.",
                     "effects": "• A Trooper can pick up an Enemy Beacon in any of the situations previously mentioned by spending one Short Skill, without needing to perform a Roll. • The Troopers must follow the Common Rules of Beacons."
                 },
@@ -2349,7 +2313,7 @@
                 "consoles": "There are three Consoles, placed on the central line of the game table. One of them is in the center of the table, and the other two are placed 12 inches from the table edges in 300/350/400 point games, 8 inches in 200/250 point games, and 6 inches in 150 point games (see map). Each Console must be represented by a Console A Token or by a scenery piece of the same diameter (such as the Consoles of the ITS Objectives Pack Alpha, the Human Consoles by Micro Art Studio, the Tech Consoles by Warsenal or the Comlink Console by Customeeple).",
                 "activate_console": {
                     "name": "ACTIVATE CONSOLE",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with a Console.",
                     "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Activate a Console. • If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • An Activated Console can be Activated again by the other player, applying the same procedure. In this situation, the Console is no longer Activated by the adversary. • Player A and Player B Tokens can be used to mark the Activated Console. It is recommended each player uses a different kind of Tokens."
                 },
@@ -2679,7 +2643,7 @@
                     "requirements": "• The Trooper must be in Silhouette contact with an Allied Trooper with an ID Token.",
                     "effects": "• Without needing to perform a Roll, the player can Swap the ID. • Place the ID Token next to the Trooper that declared this Skill."
                 },
-                "common_rules_of_id_tokens": "^ A Trooper with an ID Token cannot enter or be in any Marker State. ^ A Trooper can only have a single ID Token at a time. ^ If a Trooper with an ID Token enters Dead State, remove their ID Token. 44",
+                "common_rules_of_id_tokens": "^ A Trooper with an ID Token cannot enter or be in any Marker State. ^ A Trooper can only have a single ID Token at a time. ^ If a Trooper with an ID Token enters Dead State, remove their ID Token.",
                 "id_checker": "There is 1 ID Checker placed in the center of the Launching Tower. The ID Checker must be represented by a Console A Token or by a scenery piece of the same diameter (such as the Consoles of the ITS Objectives Pack Alpha, the Human Consoles by Micro Art Studio, the Tech Consoles by Warsenal or the Comlink Console by Customeeple).",
                 "extract_identified_tropper": {
                     "name": "EXTRACT IDENTIFIED TROPPER",
@@ -2969,7 +2933,7 @@
                     "effects": "• Spending one Short Skill, without needing a Roll, the Trooper can pick up a Supply Box in any of the situations previously mentioned. Place the Supply Box Token in Silhouette contact with the Trooper. • If the Supply Box is in the enemy’s Safe Area, the Specialist Troop must pass a Normal WIP-3 Roll. • The Trooper must follow the Common Rules of Supply Boxes."
                 },
                 "common_rules_of_supply_boxes": "^ Each Model can carry a maximum of 1 Supply Box. As an exception, Models possessing the Baggage Special Skill can carry up to 2 Supply Boxes. ^ Only Models, and not Markers, (Camo, Impersonation, Holoechoes…) can carry the Supply Boxes. ^ The Supply Box Token must always be kept on the table. ^ The Supply Box Token always remains in Silhouette contact with the Trooper which is carrying it. ^ If the Trooper carrying the Supply Box enters or is in any Null State, they drop the Supply Box. Move the Supply Box Token slightly out of Silhouette contact with the Trooper. ^ Supply Box Tokens don’t block movement or LoF.",
-                "controlling_the_supply_boxes": "A Supply Box is Controlled by a player if, at the end of the game, that player has a Model, but not a Marker, carrying it. That Trooper cannot be in a Null State or in Silhouette contact with any enemy Model. Supply Boxes in a player’s Safe Area are Controlled by that player unless an enemy Specialist Troop is carrying it. 47",
+                "controlling_the_supply_boxes": "A Supply Box is Controlled by a player if, at the end of the game, that player has a Model, but not a Marker, carrying it. That Trooper cannot be in a Null State or in Silhouette contact with any enemy Model. Supply Boxes in a player’s Safe Area are Controlled by that player unless an enemy Specialist Troop is carrying it.",
                 "safe_area": "Each player has a Safe Area where they must deposit the Supply Boxes. Before the Deployment Phase, each player must place one Circular Template. It can be placed on any surface of the game table that is equal or larger in size than the Template, must be completely outside any Deployment Zones, and cannot overlap another Safe Area. The player that kept Deployment must place their Circular Template first. Any Trooper may put down a Supply Box in a Safe Area by spending one Short Skill, without needing to perform a Roll. The Trooper must place the Supply Box totally inside the Safe Area. Only Specialist Troops may pick up a Supply Box from the enemy’s Safe Area, using the Pick Up Supply Boxes Short Skill.",
                 "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops.",
                 "operational_learning": "When a Specialist Troop performs a Skill with the Scenario Label that requires a WIP Roll and fails, they benefit from the following MODs in subsequent Orders: ^ In the second consecutive Order, the Trooper applies a +3 MOD to the WIP Roll required for that Scenario Skill. ^ In the third consecutive Order—and subsequent Orders— the Trooper applies +3 and +1SD MODs to the WIP Roll required for that Scenario Skill. ^ These MODs are cumulative with any other MOD that applies to Skills with the Scenario Label.",
@@ -3194,7 +3158,7 @@
                 },
                 "area_of_interest": "In this scenario the Areas of Interest are Zones of Operations (ZO), represented by Circular Templates. There are a total of three Areas of Interest, one of which is the Special Area of Interest. Before the Deployment Phase, and in Initiative order, each player must place their Circular Templates. They can be placed on any surface of the game table that is equal or larger in size than the Template, must be completely outside any Deployment Zones, and cannot overlap another Area of Interest. The player with the first turn must place an Area of Interest and the Special Area of Interest, specifying which Template is the Special Area of Interest when placing it. The player with second turn places an Area of Interest.",
                 "dominate_zo": "A Zone of Operations (ZO) is Dominated by a player if they have more Victory Points than the adversary inside the area. Only Troopers represented by Models or Markers (Camouflaged, Shasvastii-Embryo...) count, as well as Proxies and Peripheral Troops. Troops in a Null State do not count. Tokens representing weapons or pieces of equipment (like Mines or Deployable Repeaters), fake Holoechoes, and any Token that does not represent a Trooper does not count either. A Trooper is inside a Zone of Operations when more than half the Trooper’s base is inside that ZO.",
-                "shasvastii": "Troopers possessing the Shasvastii Special Skill that are inside a Zone of Operations count while they are in Unconscious State or any non-Null State. 50",
+                "shasvastii": "Troopers possessing the Shasvastii Special Skill that are inside a Zone of Operations count while they are in Unconscious State or any non-Null State.",
                 "baggage": "Troopers possessing the Baggage piece of Equipment that are inside a Zone of Operations and in a non-Null State provide an additional 20 Victory Points for Dominating the ZO.",
                 "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops.",
                 "intelcom_card_(support_and_control)": "Before the beginning of the game, but after choosing the first Classified Objective, the player must inform to their adversary if that card will be their Classified Objective or their INTELCOM Card. Each player rolls a die and the one who gets the highest score must be the first who announces their decision to their adversary. The content of the card, whether the mission or the card numeric value, is Private Information, no matter which use the player has chosen for it. At the end of the last Game Round, when the players count up their points and in Initiative order, the player can use their INTELCOM Card in Support and Control Mode. Support and Control Mode: The player can add the value of the Support and Control Card to their Victory Points in the Zone of Operations (ZO) of their choice. The player must have at least one Trooper inside that ZO, in a non-Null State."
@@ -3274,7 +3238,7 @@
             },
             "tactical_support_options": 0,
             "suitable_for_reinforcements": true,
-            "mission_objectives": ["[[objective_table_0]] 52"],
+            "mission_objectives": ["[[objective_table_0]]"],
             "forces_and_deployment": {
                 "sides": "SIDE A and SIDE B",
                 "deployment_table": [
@@ -4160,11 +4124,11 @@
                 "consoles": "There are 4 Consoles, placed on the center of each Quadrant (See map). Each Console must be represented by a Console A Token or by a scenery piece of the same diameter (such as the Consoles of the ITS Objective Pack Alpha, the Human Consolesby Micro Art Studio, the Tech Consoles by Warsenal or the Comlink Console by Customeeple).",
                 "hack_consoles": {
                     "name": "HACK CONSOLES",
-                    "skill_type": "short skill, Attack, Scenario.",
+                    "skill_type": "short skill, Attack, Scenario",
                     "requirements": "• Only Specialist Troops can declare this Skill. • The Specialist Troop must be in Silhouette contact with a Console.",
                     "effects": "• Allows the Specialist Troop to make a Normal WIP Roll to Hack the Console. • If the roll is failed, this can be repeated as many times as necessary, each time spending the corresponding Short Skill and making the roll. • A Hacked Console can be Hacked again by the other player applying the same procedure. In this case, both players will count that Console as Hacked. • Player A and Player B Tokens can be used to mark the Hacked Consoles. It is recommended each player uses a different kind of Tokens."
                 },
-                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops. 59",
+                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops.",
                 "operational_learning": "When a Specialist Troop performs a Skill with the Scenario Label that requires a WIP Roll and fails, they benefit from the following MODs in subsequent Orders: ^ In the second consecutive Order, the Trooper applies a +3 MOD to the WIP Roll required for that Scenario Skill. ^ In the third consecutive Order—and subsequent Orders— the Trooper applies +3 and +1SD MODs to the WIP Roll required for that Scenario Skill. ^ These MODs are cumulative with any other MOD that applies to Skills with the Scenario Label.",
                 "important:": "These MODs only apply to Rolls made in consecutive Orders by the same Trooper for the same Scenario Skill, with the same target, with no interruptions, or Orders spent on other Troopers: ^ If the Trooper passes the Roll, the sequence resets. ^ If the Trooper do not declare that Scenario Skill, the sequence resets. ^ If the Trooper declare the same Skill, but on a different target, the sequence resets. ^ If an Order is spent on any other Trooper, the sequence resets. ^ Only one sequence can be applied per Trooper and per Scenario-labelled Skill at a time.",
                 "key_ops": "The Key Ops is a special tactics operator with unique training to conduct multi-domain reconnaissance and combat across the full spectrum of conflicts. At the end of the Deployment Phase, in Initiative order, players must declare which Trooper from their Army List is their Key Ops. The Trooper chosen must be always one of the models deployed on the game table. Players are not allowed to choose Troopers in Hidden Deployment or in Marker state. This Trooper must always be on the game table as a Model and not as a Marker (Camouflaged, Holoecho…). Also, Irregular Troops and those whose Troop Type is REM or VH are not eligible to be Key Ops. The Key Ops possesses the Dodge (+3) and Tactical Awareness Special Skills, even if those are not listed on their Unit Profile. These Special Skills are not cumulative, if the Trooper already has them, then they are not applied. The Key Ops is identified with a Player A or B Marker.",
@@ -4440,7 +4404,7 @@
                 "control_a_communication_antenna": "A Communication Antenna is Controlled by a player as long as that player is the only one with at least one Trooper (as a Model, not a Marker) in Silhouette contact with it. So there cannot be any enemy Troopers in Silhouette contact with the Communication Antenna. Models in a Null State cannot do either.",
                 "tech-coffin": "There is 1 Tech-Coffin placed in the center of the table. The Tech-Coffin must be represented by a Tech-Coffin Token or with a scenery piece of the same diameter (such as the Tech- Coffin of the ITS Objective Pack Alpha, the Stasis Coffins by Warsenal or the Cryo Pods by Customeeple).",
                 "control_the_tech-coffin": "The Tech-Coffin is Controlled by a player as long as that player is the only one with at least one Trooper (as a Model, not a Marker) in Silhouette contact with it. So there cannot be any enemy Troopers in Silhouette contact with the Tech-Coffin. Models in a Null State cannot do either.",
-                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops. 62",
+                "specialist_troops": "For the purposes of this scenario, only Hackers, Doctors, Engineers, Forward Observers, Paramedics, and Troopers possessing the Chain of Command or the Specialist Operative Special Skill are considered Specialist Troops. Hackers, Doctors, and Engineers cannot make use of Repeaters or Peripheral (Servant) Models to perform tasks reserved for Specialist Troops.",
                 "operational_learning": "When a Specialist Troop performs a Skill with the Scenario Label that requires a WIP Roll and fails, they benefit from the following MODs in subsequent Orders: In the second consecutive Order, the Trooper applies a +3 MOD to the WIP Roll required for that Scenario Skill. In the third consecutive Order—and subsequent Orders—the Trooper applies +3 and +1SD MODs to the WIP Roll required for that Scenario Skill. These MODs are cumulative with any other MOD that applies to Skills with the Scenario Label.",
                 "important:": "These MODs only apply to Rolls made in consecutive Orders by the same Trooper for the same Scenario Skill, with the same target, with no interruptions, or Orders spent on other Troopers: If the Trooper passes the Roll, the sequence resets. If the Trooper do not declare that Scenario Skill, the sequence resets. If the Trooper declares the same Skill, but with a different target, the sequence resets. If an Order is spent on any other Trooper, the sequence resets. Only one sequence can be applied per Trooper and per Scenario-Labelled Skill at a time.",
                 "active_lieutenant": "At the end of the game, a Lieutenant is Active if they are not in any Null state (Unconscious, Dead, Sepsitorized…), Isolated State, or any Immobilized State.",
