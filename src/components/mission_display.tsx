@@ -50,8 +50,8 @@ export default function MissionDisplay({
     if (!mission) {
         return (
             <div {...props}>
-                Mission {`"${missionKey}"`} not found in mission pack {`"${packKey}"`}
-                .
+                Mission {`"${missionKey}"`} not found in mission pack{' '}
+                {`"${packKey}"`}.
             </div>
         );
     }
@@ -136,38 +136,45 @@ export default function MissionDisplay({
 
                         {mission.forces_and_deployment.maps && (
                             <div className="mb-4 w-full grid justify-center items-center gap-4">
-                                <Select
-                                    value={gameSize.toFixed()}
-                                    onValueChange={(value) => {
-                                        const newGameSize = parseInt(value);
-                                        setGameSize(newGameSize);
-                                        const selectedMap =
-                                            mission.forces_and_deployment
-                                                .maps?.[newGameSize];
-                                        posthog.capture('game_size_changed', {
-                                            mission_name: mission.name,
-                                            mission_key: missionKey,
-                                            season_key: packKey,
-                                            game_size_index: newGameSize,
-                                            game_sizes_label:
-                                                selectedMap?.gameSizes,
-                                        });
-                                    }}>
-                                    <SelectTrigger className="m-auto">
-                                        <SelectValue placeholder="Select a Game Size" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        {mission.forces_and_deployment.maps?.map(
-                                            ({ gameSizes }, i) => (
-                                                <SelectItem
-                                                    key={gameSizes}
-                                                    value={i.toFixed()}>
-                                                    {gameSizes}
-                                                </SelectItem>
-                                            ),
-                                        )}
-                                    </SelectContent>
-                                </Select>
+                                {mission.forces_and_deployment.maps.length >
+                                    1 && (
+                                    <Select
+                                        value={gameSize.toFixed()}
+                                        onValueChange={(value) => {
+                                            const newGameSize = parseInt(value);
+                                            setGameSize(newGameSize);
+                                            const selectedMap =
+                                                mission.forces_and_deployment
+                                                    .maps?.[newGameSize];
+                                            posthog.capture(
+                                                'game_size_changed',
+                                                {
+                                                    mission_name: mission.name,
+                                                    mission_key: missionKey,
+                                                    season_key: packKey,
+                                                    game_size_index:
+                                                        newGameSize,
+                                                    game_sizes_label:
+                                                        selectedMap?.gameSizes,
+                                                },
+                                            );
+                                        }}>
+                                        <SelectTrigger className="m-auto">
+                                            <SelectValue placeholder="Select a Game Size" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            {mission.forces_and_deployment.maps?.map(
+                                                ({ gameSizes }, i) => (
+                                                    <SelectItem
+                                                        key={gameSizes}
+                                                        value={i.toFixed()}>
+                                                        {gameSizes}
+                                                    </SelectItem>
+                                                ),
+                                            )}
+                                        </SelectContent>
+                                    </Select>
+                                )}
 
                                 <div>
                                     <DeploymentMapDisplay
